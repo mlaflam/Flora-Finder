@@ -1,0 +1,429 @@
+/** LINKS **/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+/** BODY **/
+body {
+  background: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+.block-main {
+  display: block;
+  width: 100%;
+}
+
+.block-ex {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
+#search-box-container {
+  /**background: rgb(127, 178, 135); **/
+  padding: 20px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  width: 65%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-left: calc(20% - 45px);
+}
+
+#search-container {
+  background:white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+
+  border-color: green;
+  border: solid;
+
+  transition: box-shadow 0.25s;
+}
+
+#search-container:focus-within {
+  box-shadow: 0 0 2px rgba(0,0,0,0.75);
+}
+
+input {
+  font-size: 20px;
+  margin-left: 14px;
+
+  min-width: 150px;
+  width: calc(100% - 300px);
+
+  box-sizing: border-box;
+  border: 1px solid white;
+
+  padding: 14px;
+
+  outline: none;
+  border: none;
+  background: transparent;
+
+}
+
+#search-container img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  padding-left: 14px;
+}
+
+
+h2,
+label,
+p {
+  font-family: Roboto;
+  font-size: 50px;
+  color: black;
+  width: 00px;
+  margin: 8px 0;
+}
+
+.explore-title {
+  font-size: 55px;
+  font-family: Roboto;
+}
+
+.explore-container {
+  display: flex;
+
+  align-items: center;
+  /* Align items in the center vertically */
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+
+.explore-icon {
+  height: 50px;
+  padding: 10px;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+.explore-info {
+  display: flex;
+  
+  align-items: start;
+  text-align: left;
+  line-height: 1.6;
+  /* Align items in the center vertically */
+  margin-bottom: 50px;
+  padding-left: 25px;
+
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+button {
+  background: #5dd259;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100px;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #1f8b23;
+}
+
+#temp-div p {
+  font-size: 60px;
+  margin-top: -30px;
+}
+
+#weather-info {
+  font-size: 20px;
+}
+
+#weather-icon {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 10px;
+  margin-bottom: 0;
+  display: none;
+}
+
+#hourly-forecast {
+  margin-top: 50px;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hourly-item {
+  flex: 0 0 auto;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  color: white;
+}
+
+.hourly-item img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+#hourly-heading {
+  color: #fff;
+  margin-top: 10px;
+}
+
+
+/** HERE **/
+
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  
+  padding-top: 3px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: rgb(222, 239, 218);
+  border-color: black;
+  border-width: thin;
+}
+
+
+.left-section {
+  display: flex;
+  align-items: center;
+  
+  margin-right: -5px;
+  margin-left: 13px;
+  
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  flex-shrink: 0;
+
+  margin-right: 20px;
+}
+
+
+.leaf-icon {
+  height: 50px;
+}
+
+.title {
+  font-size: 35px;
+  font-family: Roboto;
+
+  color: black;
+  width: 200px;
+  border-right: solid;
+  margin-right: 20px;
+}
+
+.title:hover{
+  cursor: pointer;
+}
+
+.sign-in-container {
+  flex: 0.9;
+  height: 34px;
+  font-size: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.sign-in-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  /* Adjust the width to change the length of the border */
+  border-bottom: 1px solid transparent;
+  /* Set a transparent border by default */
+  transition: width 0.15s, border-bottom-color 0.15s;
+  /* Add width and border-bottom-color transitions */
+}
+
+.sign-in-container:hover::after {
+  width: 50%;
+  /* Adjust the width on hover */
+  border-bottom-color: green;
+  /* Change border color on hover */
+}
+
+.sign-in-container:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.sign-in-container:active {
+  color: rgb(0, 72, 0);
+  cursor: pointer;
+  align-items: center;
+}
+
+
+/** RIGHT SECTION**/
+
+.git-icon {
+  height: 32px;
+  border-radius: 16px;
+
+  cursor: pointer;
+}
+
+
+.header-name-left {
+  flex: 0.9;
+  height: 34px;
+  font-size: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.header-name-left::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  border-bottom: 1px solid transparent;
+  transition: width 0.15s, border-bottom-color 0.15s;
+}
+
+.header-name-left:hover::after {
+  width: 80%;
+  /* Adjust the width on hover */
+  border-bottom-color: green;
+  /* Change border color on hover */
+}
+
+.header-name-left:hover {
+  color: green;
+  cursor: pointer;
+  align-items: center;
+}
+
+.header-name-left:active {
+  color: rgb(0, 72, 0);
+  cursor: pointer;
+  align-items: center;
+}
+
+/* EXAMPLE PLANTS GRID HERE */
+
+#example-plants-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 40px;
+  border-width: 1px;
+}
+
+@media (max-width:750px) {
+  #example-plants-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width:751px) and (max-width: 1099px) {
+  #example-plants-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width:1100px) and (max-width: 1399px) {
+  #example-plants-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:1400px) {
+  #example-plants-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.example-plant {
+  border: solid;
+}
+
+.plant-block {
+  background-color: rgb(222, 239, 218);
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.plant-preview {
+  height: 120px;
+}
+
+.plant-info {
+  text-align: left;
+}
+
+.plant-scientific-name {
+  font-family: Roboto;
+  font-size: 25px;
+}
+
+.plant-common-name {
+  font-family: Roboto;
+  font-size: 15px;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(222, 239, 218);
+  height: 100px;
+  width: 100vw;
+  padding-top: 40px;
+  color: #111;
+}
