@@ -17,9 +17,7 @@ function ExplorePage() {
 
           <div id="search-box-container">
             <div className="explore-container">
-              <a href="https://mlaflam.github.io/simple-website/">
-                <img className="explore-icon" src={compassIcon} alt="Compass Icon" />
-              </a>
+              <img className="explore-icon" src={compassIcon} alt="Compass Icon" />
               <div className="explore-title">Explore</div>
             </div>
 
@@ -29,7 +27,7 @@ function ExplorePage() {
 
             <div id="search-container">
               <img className="search-icon" src={searchIcon} alt="Search Icon" />
-              <input className="search" type="text" id="city" placeholder="Enter state" />
+              <input className="search" type="text" placeholder="Enter state" />
             </div>
 
           </div>
