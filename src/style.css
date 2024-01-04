@@ -191,7 +191,7 @@ button:hover {
 }
 
 
-/** HERE **/
+/** HEADER **/
 
 .header {
   height: 70px;
@@ -238,6 +238,7 @@ button:hover {
 }
 
 .title {
+  text-decoration: none;
   font-size: 35px;
   font-family: Roboto;
 
@@ -305,8 +306,16 @@ button:hover {
   cursor: pointer;
 }
 
+.LINK {
+  text-decoration: none;
+}
+
+.LINK:visited {
+  color: black;
+}
 
 .header-name-left {
+  text-decoration: none;
   flex: 0.9;
   height: 34px;
   font-size: 15px;
