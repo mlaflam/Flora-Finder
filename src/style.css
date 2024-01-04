@@ -306,13 +306,30 @@ button:hover {
   cursor: pointer;
 }
 
+.title-link {
+  text-decoration: none;
+  color: black;
+}
+
 .LINK {
   text-decoration: none;
+  color: black;
+}
+
+
+.LINK:active {
+  color:rgb(0, 72, 0);
+}
+
+.LINK:hover {
+  color: green;
 }
 
 .LINK:visited {
-  color: black;
+  text-decoration: none;
+  color: inherit;
 }
+
 
 .header-name-left {
   text-decoration: none;

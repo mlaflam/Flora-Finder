@@ -15,7 +15,7 @@ const Navbar = () => {
         </Link>
 
         <div className="title" >
-          <Link to='/' className='LINK' >FloraFinders</Link>
+          <Link to='/' className='title-link' >FloraFinders</Link>
         </div>
 
         <div className="header-link">
@@ -36,7 +36,9 @@ const Navbar = () => {
 
       <div className="right-section">
         <div className="sign-in-container">
-          Sign in
+          <div>
+            <li className="header-name-left"><Link to='/SignIn' className='LINK' >Sign In</Link></li>
+          </div>
         </div>
         <a href="https://github.com/mlaflam/flora-finder-website" target="_blank">
           <img className="git-icon" src={gitIcon} alt="GitHub Icon" />
