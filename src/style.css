@@ -28,7 +28,7 @@ body {
   margin-bottom: 100px;
 }
 
-#search-box-container {
+#search-box-container, #error-main-container {
   /**background: rgb(127, 178, 135); **/
   padding: 20px;
   margin-top: 150px;
@@ -38,6 +38,19 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   margin-left: calc(20% - 45px);
+}
+
+#error-main-container {
+  width: 110%;
+  text-align: center;
+  margin-left: calc(10% - 45px);
+}
+
+@media (max-width: 900px) {
+
+  #error-main-container {
+    width: 65%;
+  }
 }
 
 #search-container {
@@ -98,14 +111,15 @@ p {
   font-family: Roboto;
 }
 
-.explore-container {
+.explore-container,
+.error-container {
   display: flex;
 
   align-items: center;
-  /* Align items in the center vertically */
   margin-bottom: 10px;
   padding-left: 25px;
 }
+
 
 .explore-icon {
   height: 50px;
@@ -691,4 +705,98 @@ p {
 .contact-button:active{
   background: rgb(62, 156, 48);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+}
+
+/** ERROR PAGE **/
+
+
+.error-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(222, 239, 218);
+  height: 100px;
+  width: 100vw;
+  padding-top: 40px;
+  color: #111;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 500px) or (max-height: 700px) {
+  .error-footer {
+      position: relative;
+    }
+}
+
+
+.link-container {
+  display: flex;
+  margin-left: 25px;
+}
+
+.link-back-1 {
+  background: rgb(115, 187, 104);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+
+  font-size: 18px;
+  width: 20%;
+  margin-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.link-back-2 {
+  border-color: rgb(115, 187, 104);
+  border: solid;
+  text-decoration: none;
+  
+  color: rgb(115, 187, 104);
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-size: 18px;
+  width: 20%;
+  margin-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.link-back-2:active {
+  color: rgb(0, 72, 0);
+}
+
+.link-back-2:hover {
+  color: green;
+}
+
+.error-info-first, 
+.error-info-second {
+  display: flex;
+  color: #4a4a4a;
+  ;
+
+  align-items: start;
+  text-align: left;
+  line-height: 1.6;
+  /* Align items in the center vertically */
+  margin-bottom: 15px;
+  padding-left: 25px;
+
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.error-info-second {
+  margin-bottom: 50px;
+  font-size: 16px;
 }
