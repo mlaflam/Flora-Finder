@@ -44,19 +44,13 @@ function AboutPage() {
               <div className="section-title">Mission</div>
             </div>
             <div className='section-info'>
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-              Explore, learn, and connect with the unique plants that call each state home.
-
+              At FloraFinders, our mission is to foster a deeper connection between individuals and the
+              native beauty of their local ecosystems. We have created a platform that empowers users to
+              explore and appreciate the rich tapestry of native plants in their state. By seamlessly enabling
+              users to search for and discover the unique flora of their region, Florafinders strives to cultivate
+              a sense of appreciation for local biodiversity. We believe that fostering this connection with nature is not
+              only enriching for individuals but also plays a crucial role in the preservation of native ecosystems.
+              Join us on a journey to rediscover and protect the natural wonders that surround us, one native plant at a time.
 
             </div>
 
@@ -69,14 +63,23 @@ function AboutPage() {
           <div className='about-page-section' >
             
             <div className="section-container">
-                <img className="section-icon" src={dataIcon} alt="Plant Preview" />
+                <img className="section-icon" src={dataIcon} alt="Data Icon" />
 
               <div className="section-title">Data</div>
             </div>
+
             <div className='section-info'>
-              All data used for this website was collected from  Trefle REST API and NatureServe Explorer REST API.
-              <img className="api-icon" src={natureServe} alt="Plant Preview" />
-              <img className="api-icon" src={trefleAPI} alt="Plant Preview" />
+              <div className='data-section-info'>FloraFinders exclusively gathered data regarding native plants from Trefle REST API and NatureServe Explorer REST API.</div>
+              
+              <div className='image-section'>
+                <a href="https://explorer.natureserve.org/" target='_blank'>
+                  <img className="api-icon" src={natureServe} alt="Nature Serve" />
+                </a>
+                <a href="https://trefle.io/" target='_blank'>
+                  <img className="api-icon" src={trefleAPI} alt="Trefle API" />
+                </a>
+
+              </div>
 
             </div>
 
@@ -85,20 +88,37 @@ function AboutPage() {
         </div>
 
         {/* CONTACT */}
+        <hr className='line'></hr>
         <div className="section-block">
-          <div className='about-page-section' >
-            <hr></hr>
+          <div className='about-page-contact-section' >
+
 
             <div className="section-container">
-                <img className="contact-section-icon" src={mailIcon} alt="Mail Icon" />
+              <img className="contact-section-icon" src={mailIcon} alt="Mail Icon" />
               <div className="section-title">Contact Us</div>
             </div>
+
             <div className='contact-form-block'>
-              <div className='contact-info-form-block'>
-                <input className='name-info' type="text" placeholder="Name" />
-                <input className='email-info' type="text" placeholder="Email" />
+
+              <div className='contact-form-top-block'>
+                <div className='contact-form-top-block-two'>
+                  <div className='contact-form-inner-block'>
+                    <div className='contact-info'>Full Name</div>
+                    <input className='name-info' type="text" placeholder="Name" />
+                  </div>
+                  <div className='contact-form-inner-block'>
+                    <div className='contact-info'>Email Address</div>
+                    <input className='email-info' type="text" placeholder="Email" />
+                  </div>
+
+                </div>
               </div>
-              <input className='subject-info' type="text" placeholder="Subject" />
+
+              <div>
+                <div className='contact-info'>Message</div>
+                <textarea className='message-info' placeholder="Message" />
+              </div>
+              
 
             </div>
 

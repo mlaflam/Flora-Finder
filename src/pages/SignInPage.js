@@ -17,9 +17,8 @@ function SignInPage() {
 
           <div id="search-box-container">
             <div className="explore-container">
-              <a href="https://mlaflam.github.io/simple-website/">
                 <img className="explore-icon" src={compassIcon} alt="Compass Icon" />
-              </a>
+
               <div className="explore-title">SIGNIN</div>
             </div>
 

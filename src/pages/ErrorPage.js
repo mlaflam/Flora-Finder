@@ -2,6 +2,7 @@ import React from 'react'
 import '../style.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Link } from "react-router-dom";
 
 import leafIconThree from '../icons/leaf-icon-3.png';
 
@@ -25,7 +26,7 @@ const ErrorPage = () => {
                 Sorry, the page you were looking for does not exist. 
             </div>
             <div className="link-back">
-              Back to Explore
+                <Link to='/' className='title-link' >Back to main</Link>
             </div>
 
 
