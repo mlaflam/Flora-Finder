@@ -129,18 +129,6 @@ p {
   font-family: "Roboto Mono", monospace;
 }
 
-button {
-  background: #5dd259;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 100px;
-  font-size: 15px;
-}
-
 
 /** HEADER **/
 
@@ -635,4 +623,37 @@ button {
 
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.button-block {
+  display: flex;
+  justify-content: start;
+}
+
+.contact-button {
+  background: rgb(91, 183, 77);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  
+  
+  font-size: 18px;
+  width: 83%;
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.contact-button:hover {
+  background: rgb(55, 159, 40);
+}
+
+.contact-button:active{
+  background: rgb(49, 134, 36);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
 }

@@ -24,6 +24,10 @@ const contact = () => {
         <div className='contact-info'>Message</div>
         <textarea className='message-info' placeholder="Message" />
       </div>
+      
+        <div className='button-block'>
+          <button className='contact-button'>DOESNT WORK??</button>
+        </div>
 
     </div>
 </div>

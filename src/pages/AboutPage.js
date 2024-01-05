@@ -118,6 +118,11 @@ function AboutPage() {
                 <div className='contact-info'>Message</div>
                 <textarea className='message-info' placeholder="Message" />
               </div>
+
+              <div className='button-block'>
+                <button className='contact-button'>Send Message</button>
+              </div>
+              
               
 
             </div>
