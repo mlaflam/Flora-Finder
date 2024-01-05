@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import ErrorFooter from '../components/ErrorFooter';
 import { Link } from "react-router-dom";
 
-import leafIconThree from '../icons/leaf-icon-3.png';
+import ErrorIcon from '../icons/error-icon-1.png';
 
 
 const ErrorPage = () => {
@@ -18,7 +18,7 @@ const ErrorPage = () => {
 
           <div id="error-main-container">
             <div className="error-container">
-              <img className="explore-icon" src={leafIconThree} alt="Plant Preview" />
+              <img className="explore-icon" src={ErrorIcon} alt="Plant Preview" />
               <div className="explore-title">Error 404</div>
             </div>
 
