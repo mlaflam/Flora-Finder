@@ -2,7 +2,8 @@ import React from 'react'
 import '../style.css';
 import Navbar from '../components/Navbar';
 import ErrorFooter from '../components/ErrorFooter';
-import { Link } from "react-router-dom";
+
+import { HashLink as Link } from 'react-router-hash-link';
 
 import ErrorIcon from '../icons/error-icon-1.png';
 
@@ -33,8 +34,12 @@ const ErrorPage = () => {
             <div className='link-container'>
               <Link to='/' className='link-back-1'> Back to main</Link>
 
-              <Link to='/' className='link-back-2'> Contact Us</Link>
+              <Link to='/About#Contact' className='link-back-2'>
+                Contact Us
+              </Link>
+              
             </div>
+
 
 
 

@@ -6,6 +6,7 @@ import ExplorePage from './pages/ExplorePage';
 import AboutPage from './pages/AboutPage';
 import SignInPage from './pages/SignInPage';
 import ErrorPage from './pages/ErrorPage';
+import Contact from './components/Contact.js'
 
 
 function App() {
@@ -16,6 +17,11 @@ function App() {
         <Route index element={<ExplorePage />} />
         <Route path='/Explore' element={<ExplorePage />} />
         <Route path='/About' element={<AboutPage />} />
+        
+        <Route name="About" path="/About" handler={<AboutPage />}>
+          <Route name="Contact" path="#Contact" handler={<Contact />} />
+        </Route>
+
         <Route path='/SignIn' element={<SignInPage />} />
         <Route path='*' element={<ErrorPage />} />
 
