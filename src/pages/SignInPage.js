@@ -1,7 +1,6 @@
 import '../style.css';
-import ExamplePlant from '../components/Example-Plant';
 import Navbar from '../components/Navbar';
-import compassIcon from '../icons/compass-icon-4.png';
+import plantIcon from '../icons/leaf-icon-3.png';
 import searchIcon from '../icons/search-icon-3.png';
 import Footer from '../components/Footer';
 
@@ -17,9 +16,14 @@ function SignInPage() {
 
           <div id="search-box-container">
             <div className="explore-container">
-                <img className="explore-icon" src={compassIcon} alt="Compass Icon" />
+              <img className="explore-icon" src={plantIcon} alt="Compass Icon" />
 
-              <div className="explore-title">SIGNIN</div>
+              <div className="explore-title">Sign In</div>
+            </div>
+            <div className="explore-container">
+              <img className="explore-icon" src={plantIcon} alt="Compass Icon" />
+
+              <div className="explore-title">Continue as Guest</div>
             </div>
 
             <div className="explore-info">
@@ -33,45 +37,7 @@ function SignInPage() {
 
           </div>
 
-          <div className="block-ex">
-            <div id="example-plants-grid">
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-
-
-            </div>
-          </div>
+          
 
         </div>
 
