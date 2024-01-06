@@ -40,6 +40,30 @@ body {
   margin-left: calc(20% - 45px);
 }
 
+#sign-in-container {
+  background-color: rgb(255, 255, 255);
+  
+  min-width: 400px;
+  width: 85%;
+  height: 370px;
+
+  padding: 20px;
+  margin-top: 150px;
+  margin-bottom: 80px;
+  
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+
+  margin-left: calc(10% - 45px);
+}
+
+@media (max-width: 520px) {
+  #sign-in-container {
+    margin-top: 210px;
+  }
+}
+
 #error-main-container {
   width: 110%;
   text-align: center;
@@ -112,6 +136,7 @@ p {
 }
 
 .explore-container,
+.sign-in-title-container,
 .error-container {
   display: flex;
 
@@ -120,6 +145,10 @@ p {
   padding-left: 25px;
 }
 
+.sign-in-title-container {
+  justify-content: center;
+  padding-right: 30px;
+}
 
 .explore-icon {
   height: 50px;
@@ -210,7 +239,7 @@ p {
   }
 }
 
-@media (min-width:100px) and (max-width: 520px) {
+@media (max-width: 520px) {
   .header {
     height: 140px;
     display: block;
@@ -446,12 +475,12 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgb(250, 250, 250);
+  background: rgb(248, 248, 248);
   height: 100px;
   width: 100vw;
   padding-top: 40px;
   color: #111;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+  
 }
 
 
@@ -625,7 +654,8 @@ p {
 
 .name-info, 
 .email-info,
-.message-info {
+.message-info,
+.username-info {
   border-radius: 5px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
@@ -638,7 +668,8 @@ p {
 }
 
 .name-info,
-.email-info {
+.email-info,
+.username-info {
   font-size: 20px;
   padding: 14px;
 

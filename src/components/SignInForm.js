@@ -1,68 +1,54 @@
-import React from "react";
+import React from 'react'
+import plantIcon from '../icons/leaf-icon-3.png';
+
+import { HashLink as Link } from 'react-router-hash-link';
 
 
-function SignInForm() {
-  const [state, setState] = React.useState({
-    email: "",
-    password: ""
-  });
-  const handleChange = evt => {
-    const value = evt.target.value;
-    setState({
-      ...state,
-      [evt.target.name]: value
-    });
-  };
-
-  const handleOnSubmit = evt => {
-    evt.preventDefault();
-
-    const { email, password } = state;
-    alert(`You are login with email: ${email} and password: ${password}`);
-
-    for (const key in state) {
-      setState({
-        ...state,
-        [key]: ""
-      });
-    }
-  };
-
+const SignInForm = () => {
   return (
-    <div className="form-container sign-in-container">
-      <form onSubmit={handleOnSubmit}>
-        <h1>Sign in</h1>
-        <div className="social-container">
-          <a href="#" className="social">
-            <i className="fab fa-facebook-f" />
-          </a>
-          <a href="#" className="social">
-            <i className="fab fa-google-plus-g" />
-          </a>
-          <a href="#" className="social">
-            <i className="fab fa-linkedin-in" />
-          </a>
+    <div id="sign-in-container">
+      <div className="sign-in-title-container">
+        <img className="explore-icon" src={plantIcon} alt="Compass Icon" />
+
+        <div className="explore-title">Sign In</div>
+      </div>
+
+      <hr className='line'></hr>
+
+      <div className='contact-form-top-block'>
+
+        <div className='contact-form-inner-block'>
+          <input className='username-info' id='info-1' placeholder="Username or Email" type="text" name="user_name" />
         </div>
-        <span>or use your account</span>
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          value={state.email}
-          onChange={handleChange}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={state.password}
-          onChange={handleChange}
-        />
-        <a href="#">Forgot your password?</a>
-        <button>Sign In</button>
-      </form>
+
+        <div className='contact-form-inner-block'>
+          <input className='email-info' id='info-2' placeholder="Password" type="email" name="user_email" />
+        </div>
+        
+        <div className='button-block'>
+
+          <button className='contact-button'>Log In</button>
+
+        </div>
+
+        <div>
+          <div>Forgot Password</div>
+          <div>Create Account</div>
+        </div>
+        
+        <div className='button-block'>
+
+          <button className='contact-button'>Log In As Guest</button>
+
+        </div>
+
+
+      </div>
+
+
+
     </div>
-  );
+  )
 }
 
-export default SignInForm;
+export default SignInForm
