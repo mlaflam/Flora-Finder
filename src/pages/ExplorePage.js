@@ -1,4 +1,6 @@
-import { useEffect, useState, onKeyUp } from "react";
+import { useEffect, useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+
 import '../style.css';
 import ExamplePlant from '../components/Example-Plant';
 import Navbar from '../components/Navbar';
@@ -7,6 +9,8 @@ import searchIcon from '../icons/search-icon-3.png';
 import Footer from '../components/Footer';
 
 const API_URL = 'https://www.omdbapi.com?apikey=e0340b1'
+
+const customIdError = "custom-id-no";
 
 function ExplorePage() {
   const validStates = ["Alabama", "Alaska", "Arizona", "Arkansas", "California",
@@ -17,18 +21,38 @@ function ExplorePage() {
     "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
     "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee",
     "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia",
-    "Wisconsin", "Wyoming"
- ]
+    "Wisconsin", "Wyoming", ""
+  ]
   
 
   const [state, setState] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  const searchState = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
-    setState(data.Search);
-    console.log("sucess?")
+  const isValidState = (input) => {
+    const isValid = validStates.includes(input);
+    console.log(`${input} is a valid state?`, isValid);
+
+    const lowercasedInput = input.toLowerCase();
+    return validStates.map(state => state.toLowerCase()).includes(lowercasedInput);
+  };
+
+  const searchState = async (state) => {
+    if (!(await isValidState(state))) {
+      toast.error("Please enter a valid US state", {
+        toastId: customIdError
+      });
+      return;
+    }
+
+    else {
+      console.log("Searching for movies in", state);
+
+      const response = await fetch(`${API_URL}&s=${state}`);
+      const data = await response.json();
+      setState(data.Search);
+      console.log("sucess?")
+    }
+
   }
 
   useEffect(() => {
@@ -42,6 +66,9 @@ function ExplorePage() {
       {/* console.log("enter pressed") */ }
     }
   };
+
+  
+
 
   return (
 
@@ -117,7 +144,7 @@ function ExplorePage() {
         <Footer />
         
       </div>
-
+      <ToastContainer />
     </div>
 
   );
