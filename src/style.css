@@ -4,7 +4,7 @@
 /** BODY **/
 body {
   background: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Roboto;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -469,29 +469,6 @@ p {
   font-size: 15px;
 }
 
-.footer,
-.error-footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgb(248, 248, 248);
-  height: 100px;
-  width: 100vw;
-  padding-top: 40px;
-  color: #111;
-  
-}
-
-
-@media (max-width: 480px) {
-  .footer {
-    margin-left: 60px;
-    padding-left: 30px;
-    /** FIX **/
-  }
-}
-
 /** ABOUT PAGE **/
 
 .section-title {
@@ -757,18 +734,6 @@ p {
 /** ERROR PAGE **/
 
 
-.error-footer {
-  position: absolute;
-
-}
-
-@media (max-width: 350px) or (max-height: 700px) {
-  .error-footer {
-      position: relative;
-    }
-}
-
-
 .link-container {
   display: flex;
   margin-left: 25px;
@@ -933,4 +898,92 @@ p {
 
 .guest {
   color: #1982c4;
+}
+
+
+
+/* FOOTER */
+
+.footer,
+.error-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(248, 248, 248);
+  height: 175px;
+  width: 100vw;
+  padding-top: 40px;
+  color: #111;
+
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.error-footer {
+  position: absolute;
+
+}
+
+@media (max-width: 350px) or (max-height: 700px) {
+  .error-footer {
+    position: relative;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .footer {
+    margin-left: 60px;
+    padding-left: 30px;
+    /** FIX **/
+  }
+}
+
+.footer-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+  width: 80%;
+}
+
+.footer-title {
+  font-size: 17px;
+  margin-bottom: 5px;
+  color: green;
+}
+
+.footer-content {
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 8px 12px 8px 12px;
+}
+
+.footer-content:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.footer-content:active {
+  color: rgb(0, 85, 0);
+  cursor: pointer;
+}
+
+.github-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.git-icon-footer {
+  height: 22px;
+  border-radius: 16px;
+
+  margin-right: -5px;
+  margin-left: 8px;
+
+  cursor: pointer;
 }
