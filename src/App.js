@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop.js'; // Import the ScrollToTop component
 import './App.css';
 import './style.css';
 
@@ -12,18 +13,19 @@ import Contact from './components/Contact.js'
 function App() {
   return (
 
-      <BrowserRouter>
+    <BrowserRouter>
+      <ScrollToTop /> {/* Include the ScrollToTop component */}
         <Routes>
-        <Route index element={<ExplorePage />} />
-        <Route path='/Explore' element={<ExplorePage />} />
-        <Route path='/About' element={<AboutPage />} />
-        
-        <Route name="About" path="/About" handler={<AboutPage />}>
-          <Route name="Contact" path="#Contact" handler={<Contact />} />
-        </Route>
+          <Route index element={<ExplorePage />} />
+          <Route path='/Explore' element={<ExplorePage />} />
+          <Route path='/About' element={<AboutPage />} />
+          
+          <Route name="About" path="/About" handler={<AboutPage />}>
+            <Route name="Contact" path="#Contact" handler={<Contact />} />
+          </Route>
 
-        <Route path='/SignIn' element={<SignInPage />} />
-        <Route path='*' element={<ErrorPage />} />
+          <Route path='/SignIn' element={<SignInPage />} />
+          <Route path='*' element={<ErrorPage />} />
 
         </Routes>
       
