@@ -971,7 +971,7 @@ p {
   cursor: pointer;
 }
 
-.github-container {
+#github-container {
   display: flex;
 
   align-items: center;
