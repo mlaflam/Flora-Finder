@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import emailjs from '@emailjs/browser';
 import '../style.css';
 import mailIcon from '../icons/mail-icon-1.png';
@@ -9,8 +8,7 @@ import mailIcon from '../icons/mail-icon-1.png';
 const Contact = () => {
   const form = useRef();
 
-
-  const initialValues = { username: "", email: "", password: "" };
+  const initialValues = { user_name: "", user_email: "", message: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -22,35 +20,38 @@ const Contact = () => {
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
+      sendEmail();
     }
-  }, [formErrors]);
+  }, [formErrors, isSubmit]);
+
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
     if (!values.user_name) {
       errors.user_name = "Required";
     }
+
     if (!values.user_email) {
       errors.user_email = "Required";
     } else if (!regex.test(values.user_email)) {
-      errors.user_email = "";
+      errors.user_email = "Invalid email address";
     }
+
     if (!values.message) {
       errors.message = "Required";
     }
+
     return errors;
   };
 
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
+  const sendEmail = () => {
     emailjs.sendForm('service_xqea5rq', 'template_qbpz3sw', form.current, 'KVZihQg63PHcWqxi_')
       .then((result) => {
         console.log(result.text);
         console.log("message sent!");
         toast.success("Message Sent!");
-        clearInput(); // Clear input fields after successful submission
+        clearInput();
       })
       .catch((error) => {
         console.log(error.text);
@@ -60,25 +61,17 @@ const Contact = () => {
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      // Call the sendEmail function here
-      sendEmail(e); // <-- Pass the event here
-      console.log("HELLO"); // You can keep this line if needed
-    }
   };
-
 
   const clearInput = () => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      document.getElementById("info-1").value = "";
-      document.getElementById("info-2").value = "";
-      document.getElementById("info-3").value = "";
+      setFormValues(initialValues);
     }
   };
+
 
 
   return (
