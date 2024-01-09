@@ -6,6 +6,7 @@ import ExamplePlant from '../components/Example-Plant';
 import Navbar from '../components/Navbar';
 import compassIcon from '../icons/compass-icon-4.png';
 import searchIcon from '../icons/search-icon-3.png';
+import xIcon from '../icons/x-button-icon.png';
 import Footer from '../components/Footer';
 
 const API_URL = 'https://www.omdbapi.com?apikey=e0340b1'
@@ -67,6 +68,11 @@ function ExplorePage() {
     }
   };
 
+  const handleClearSearch = () => {
+    setSearchTerm('');
+  };
+
+
   
 
 
@@ -89,14 +95,23 @@ function ExplorePage() {
             </div>
 
             <div id="search-container">
-              <img className="search-icon" src={searchIcon} alt="Search Icon" />
-              <input id='search' className="search" type="text" placeholder="Enter state"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                onKeyDown={handleKeyPress}
-                 />
-            </div>
+              <div className='search-inner-container'>
+                <img className="search-icon" src={searchIcon} alt="Search Icon" />
+                <input
+                  id='search'
+                  className="search"
+                  type="text"
+                  placeholder="Enter state"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyDown={handleKeyPress}
+                />
+              </div>
 
+              {searchTerm && (
+                <img className="x-icon" src={xIcon} alt="X Icon" onClick={handleClearSearch} />
+              )}
+            </div>
           </div>
 
           <div className="block-ex">
