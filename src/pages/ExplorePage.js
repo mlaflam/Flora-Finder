@@ -10,8 +10,11 @@ import xIcon from '../icons/x-button-icon.png';
 import Footer from '../components/Footer';
 
 const API_URL = 'https://www.omdbapi.com?apikey=e0340b1'
+const plants_api_url = 'https://explorer.natureserve.org/api/data/speciesSearch';
+
 
 const customIdError = "custom-id-no";
+const customIdError2 = "custom-id-no-2";
 
 function ExplorePage() {
   const validStates = ["Alabama", "Alaska", "Arizona", "Arkansas", "California",
@@ -37,41 +40,130 @@ function ExplorePage() {
     return validStates.map(state => state.toLowerCase()).includes(lowercasedInput);
   };
 
-  const searchState = async (state) => {
-    if (!(await isValidState(state))) {
+  { /*search here*/}
+  const searchState = async (stateName) => {
+    // Map state name to abbreviation
+    const stateAbbreviations = {
+      Alabama: 'AL',
+      Alaska: 'AK',
+      Arizona: 'AZ',
+      Arkansas: 'AR',
+      California: 'CA',
+      Colorado: 'CO',
+      Connecticut: 'CT',
+      Delaware: 'DE',
+      Florida: 'FL',
+      Georgia: 'GA',
+      Hawaii: 'HI',
+      Idaho: 'ID',
+      Illinois: 'IL',
+      Indiana: 'IN',
+      Iowa: 'IA',
+      Kansas: 'KS',
+      Kentucky: 'KY',
+      Louisiana: 'LA',
+      Maine: 'ME',
+      Maryland: 'MD',
+      Massachusetts: 'MA',
+      Michigan: 'MI',
+      Minnesota: 'MN',
+      Mississippi: 'MS',
+      Missouri: 'MO',
+      Montana: 'MT',
+      Nebraska: 'NE',
+      Nevada: 'NV',
+      NewHampshire: 'NH',
+      NewJersey: 'NJ',
+      NewMexico: 'NM',
+      NewYork: 'NY',
+      NorthCarolina: 'NC',
+      NorthDakota: 'ND',
+      Ohio: 'OH',
+      Oklahoma: 'OK',
+      Oregon: 'OR',
+      Pennsylvania: 'PA',
+      RhodeIsland: 'RI',
+      SouthCarolina: 'SC',
+      SouthDakota: 'SD',
+      Tennessee: 'TN',
+      Texas: 'TX',
+      Utah: 'UT',
+      Vermont: 'VT',
+      Virginia: 'VA',
+      Washington: 'WA',
+      WestVirginia: 'WV',
+      Wisconsin: 'WI',
+      Wyoming: 'WY',
+      // Add more state mappings as needed
+    };
+
+    const stateAbbreviation = stateAbbreviations[stateName];
+
+    if (!stateAbbreviation) {
+      { /*if (!isValidState)*/ }
       toast.error("Please enter a valid US state", {
         toastId: customIdError
       });
       return;
     }
 
-    else {
-      console.log("Searching for movies in", state);
+    try {
+      const response = await fetch(plants_api_url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          criteriaType: 'species',
+          textCriteria: [],
+          statusCriteria: [],
+          locationCriteria: [{
+            paramType: 'subnation',
+            subnation: stateAbbreviation,  // Replace 'state' with the actual state code or name
+            nation: 'US',
+          }],
+          pagingOptions: {
+            page: null,
+            recordsPerPage: 5,
+          },
+          recordSubtypeCriteria: [],
+          modifiedSince: null,
+          locationOptions: {
+            origin: 'onlyNatives',
+          },
+          classificationOptions: null,
+          speciesTaxonomyCriteria: [],
+        }),
+      });
 
-      const response = await fetch(`${API_URL}&s=${state}`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
       const data = await response.json();
-      setState(data.Search);
-      console.log("sucess?")
+      setState(data);
+      console.log(data)
+    } catch (error) {
+      console.error('Error fetching data:', error.message);
+      toast.error("Error fetching data", {
+        toastId: customIdError2
+      });
     }
-
-  }
+  };
 
   useEffect(() => {
     searchState('');
   }, []);
 
-
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       searchState(searchTerm);
-      {/* console.log("enter pressed") */ }
     }
   };
 
   const handleClearSearch = () => {
     setSearchTerm('');
   };
-
 
   
 
@@ -115,16 +207,16 @@ function ExplorePage() {
           </div>
 
           <div className="block-ex">
-            
+
               {
                 state?.length > 0 ?
                   (<div id="example-plants-grid">
-                    {state.map((plant) => (<ExamplePlant movie={plant} />))}
+                  {state.map((plant) => (<ExamplePlant plant={plant} />))}
 
                   </div>
                   ) : (
                     <div className="empty">
-                      <h2>No Plants Found</h2>
+                      { /*<h2>No Plants Found</h2> */ }
                     </div>
                   )
 

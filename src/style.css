@@ -455,11 +455,11 @@ p {
 
 .plant-block {
   background-color: rgb(222, 239, 218);
-  border: solid;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 150px;
+  margin-bottom: 5px;
 }
 
 .plant-preview {
