@@ -115,43 +115,22 @@ function ExplorePage() {
           </div>
 
           <div className="block-ex">
-            <div id="example-plants-grid">
+            
+              {
+                state?.length > 0 ?
+                  (<div id="example-plants-grid">
+                    {state.map((plant) => (<ExamplePlant movie={plant} />))}
 
-              <ExamplePlant />
+                  </div>
+                  ) : (
+                    <div className="empty">
+                      <h2>No Plants Found</h2>
+                    </div>
+                  )
 
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
-
-              <ExamplePlant />
+              }
 
 
-
-            </div>
           </div>
 
         </div>
