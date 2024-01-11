@@ -9,7 +9,7 @@ import searchIcon from '../icons/search-icon-3.png';
 import xIcon from '../icons/x-button-icon.png';
 import Footer from '../components/Footer';
 
-const API_URL = 'https://www.omdbapi.com?apikey=e0340b1'
+
 const plants_api_url = 'https://explorer.natureserve.org/api/data/speciesSearch';
 
 
@@ -17,28 +17,9 @@ const customIdError = "custom-id-no";
 const customIdError2 = "custom-id-no-2";
 
 function ExplorePage() {
-  const validStates = ["Alabama", "Alaska", "Arizona", "Arkansas", "California",
-    "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii",
-    "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine",
-    "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri",
-    "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico",
-    "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
-    "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee",
-    "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia",
-    "Wisconsin", "Wyoming", ""
-  ]
-  
 
   const [state, setState] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-
-  const isValidState = (input) => {
-    const isValid = validStates.includes(input);
-    console.log(`${input} is a valid state?`, isValid);
-
-    const lowercasedInput = input.toLowerCase();
-    return validStates.map(state => state.toLowerCase()).includes(lowercasedInput);
-  };
 
   { /*search here*/}
   const searchState = async (stateName) => {
@@ -72,28 +53,80 @@ function ExplorePage() {
       Montana: 'MT',
       Nebraska: 'NE',
       Nevada: 'NV',
-      NewHampshire: 'NH',
-      NewJersey: 'NJ',
-      NewMexico: 'NM',
-      NewYork: 'NY',
-      NorthCarolina: 'NC',
-      NorthDakota: 'ND',
+      "New Hampshire": 'NH',
+      "New Jersey": 'NJ',
+      "New Mexico": 'NM',
+      "New York": 'NY',
+      "North Carolina": 'NC',
+      "North Dakota": 'ND',
       Ohio: 'OH',
       Oklahoma: 'OK',
       Oregon: 'OR',
       Pennsylvania: 'PA',
-      RhodeIsland: 'RI',
-      SouthCarolina: 'SC',
-      SouthDakota: 'SD',
+      "Rhode Island": 'RI',
+      "South Carolina": 'SC',
+      "South Dakota": 'SD',
       Tennessee: 'TN',
       Texas: 'TX',
       Utah: 'UT',
       Vermont: 'VT',
       Virginia: 'VA',
       Washington: 'WA',
-      WestVirginia: 'WV',
+      "West Virginia": 'WV',
       Wisconsin: 'WI',
       Wyoming: 'WY',
+
+      alabama: 'AL',
+      alaska: 'AK',
+      arizona: 'AZ',
+      arkansas: 'AR',
+      california: 'CA',
+      colorado: 'CO',
+      connecticut: 'CT',
+      delaware: 'DE',
+      florida: 'FL',
+      georgia: 'GA',
+      hawaii: 'HI',
+      idaho: 'ID',
+      illinois: 'IL',
+      indiana: 'IN',
+      iowa: 'IA',
+      kansas: 'KS',
+      kentucky: 'KY',
+      louisiana: 'LA',
+      maine: 'ME',
+      maryland: 'MD',
+      massachusetts: 'MA',
+      michigan: 'MI',
+      minnesota: 'MN',
+      mississippi: 'MS',
+      missouri: 'MO',
+      montana: 'MT',
+      nebraska: 'NE',
+      nevada: 'NV',
+      'new hampshire': 'NH',
+      "new jersey": 'NJ',
+      "new mexico": 'NM',
+      "new york": 'NY',
+      "north carolina": 'NC',
+      "north dakota": 'ND',
+      ohio: 'OH',
+      oklahoma: 'OK',
+      oregon: 'OR',
+      pennsylvania: 'PA',
+      "rhode island": 'RI',
+      "south carolina": 'SC',
+      "south dakota": 'SD',
+      tennessee: 'TN',
+      texas: 'TX',
+      utah: 'UT',
+      vermont: 'VT',
+      virginia: 'VA',
+      washington: 'WA',
+      "west virginia": 'WV',
+      wisconsin: 'WI',
+      wyoming: 'WY',
+      "": "N/A"
       // Add more state mappings as needed
     };
 
@@ -109,10 +142,10 @@ function ExplorePage() {
 
     try {
       const response = await fetch(plants_api_url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
         body: JSON.stringify({
           criteriaType: 'species',
           textCriteria: [],
@@ -124,7 +157,7 @@ function ExplorePage() {
           }],
           pagingOptions: {
             page: null,
-            recordsPerPage: 5,
+            recordsPerPage: 4,
           },
           recordSubtypeCriteria: [],
           modifiedSince: null,
@@ -132,7 +165,10 @@ function ExplorePage() {
             origin: 'onlyNatives',
           },
           classificationOptions: null,
-          speciesTaxonomyCriteria: [],
+          speciesTaxonomyCriteria: [{
+            "paramType": "informalTaxonomy",
+            "informalTaxonomy": "Plants"
+          }],
         }),
       });
 
@@ -141,8 +177,8 @@ function ExplorePage() {
       }
 
       const data = await response.json();
-      setState(data);
-      console.log(data)
+      setState(data.results);
+      console.log(data.results)
     } catch (error) {
       console.error('Error fetching data:', error.message);
       toast.error("Error fetching data", {
@@ -208,19 +244,24 @@ function ExplorePage() {
 
           <div className="block-ex">
 
-              {
-                state?.length > 0 ?
-                  (<div id="example-plants-grid">
-                  {state.map((plant) => (<ExamplePlant plant={plant} />))}
-
+            {
+              state?.length > 0 ? (
+                <div>
+                  {/*console.log(state)*/}
+                  <div id="example-plants-grid">
+                    {state.map((plant) => (
+                    
+                      <ExamplePlant plant={plant} />
+                    ))}
                   </div>
-                  ) : (
-                    <div className="empty">
-                      { /*<h2>No Plants Found</h2> */ }
-                    </div>
-                  )
-
-              }
+                </div>
+              ) : (
+                <div className="empty">
+                    {/* <h2>No Plants Found</h2> */}
+                    <h2>No Plants Found</h2>
+                </div>
+              )
+            }
 
 
           </div>

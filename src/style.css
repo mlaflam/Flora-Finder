@@ -168,6 +168,13 @@ p {
   margin-right: 10px;
 }
 
+.sign-in-icon {
+  height: 60px;
+  padding: 10px;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
 .explore-info {
   display: flex;
   color: #4a4a4a;;

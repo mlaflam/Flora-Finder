@@ -1,5 +1,6 @@
 import React from 'react'
 import plantIcon from '../icons/leaf-icon-3.png';
+import signInIcon from '../icons/sign-in-icon-3.png';
 
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -8,7 +9,7 @@ const SignInForm = () => {
   return (
     <div id="sign-in-container">
       <div className="sign-in-title-container">
-        <img className="explore-icon" src={plantIcon} alt="Compass Icon" />
+        <img className="sign-in-icon" src={signInIcon} alt="Compass Icon" />
 
         <div className="explore-title">Sign In</div>
       </div>
