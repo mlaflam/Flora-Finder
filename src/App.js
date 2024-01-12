@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage';
 import SignInPage from './pages/SignInPage';
 import ErrorPage from './pages/ErrorPage';
 import Contact from './components/Contact.js'
+import ExamplePlantPage from './pages/ExamplePlantPage.js';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route index element={<ExplorePage />} />
           <Route path='/Explore' element={<ExplorePage />} />
+          <Route path="/PlantPage/:scientificName" element={<ExamplePlantPage />} />
           <Route path='/About' element={<AboutPage />} />
           
           <Route name="About" path="/About" handler={<AboutPage />}>

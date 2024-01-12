@@ -8,7 +8,7 @@ import compassIcon from '../icons/compass-icon-4.png';
 import searchIcon from '../icons/search-icon-3.png';
 import xIcon from '../icons/x-button-icon.png';
 import Footer from '../components/Footer';
-
+import MapComponent from "../components/MapComponent.js";
 
 const plants_api_url = 'https://explorer.natureserve.org/api/data/speciesSearch';
 
@@ -17,6 +17,8 @@ const customIdError = "custom-id-no";
 const customIdError2 = "custom-id-no-2";
 
 function ExplorePage() {
+
+  const [plantData, setPlantData] = useState(null);
 
   const [state, setState] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -202,6 +204,7 @@ function ExplorePage() {
   };
 
   
+  
 
 
   return (
@@ -242,6 +245,9 @@ function ExplorePage() {
             </div>
           </div>
 
+
+          {/*<MapComponent data={data} width={500} height={300} /> */}
+
           <div className="block-ex">
 
             {
@@ -251,14 +257,14 @@ function ExplorePage() {
                   <div id="example-plants-grid">
                     {state.map((plant) => (
                     
-                      <ExamplePlant plant={plant} />
+                      <ExamplePlant plant={plant}/>
                     ))}
                   </div>
                 </div>
               ) : (
                 <div className="empty">
                     {/* <h2>No Plants Found</h2> */}
-                    <h2>No Plants Found</h2>
+                    <h2 className="spacer"></h2>
                 </div>
               )
             }

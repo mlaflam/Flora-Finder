@@ -422,6 +422,10 @@ p {
   align-items: center;
 }
 
+.spacer {
+  height: 1px;
+}
+
 /* EXAMPLE PLANTS GRID HERE */
 
 #example-plants-grid {
@@ -456,9 +460,6 @@ p {
   }
 }
 
-.example-plant {
-  border: solid;
-}
 
 .plant-block {
   background-color: rgb(222, 239, 218);
@@ -467,6 +468,8 @@ p {
   align-items: center;
   height: 150px;
   margin-bottom: 5px;
+  border: solid;
+  border-radius: 5px;
 }
 
 .plant-preview {
@@ -479,13 +482,17 @@ p {
 
 .plant-scientific-name {
   font-family: Roboto;
-  font-size: 25px;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 2px;
 }
 
 .plant-common-name {
   font-family: Roboto;
-  font-size: 15px;
+  font-size: 17px;
+  color: #4a4a4a;
 }
+
 
 /** ABOUT PAGE **/
 
@@ -1049,4 +1056,39 @@ p {
   margin-left: 5px;
   font-weight: 500;
   color: red;
+}
+
+/*PLANT PAGE*/
+
+
+.link-to-plant {
+  text-decoration: none;
+}
+
+.link-to-plant:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.plant-page-main {
+  margin-top: 150px;
+}
+
+.plant-page-info {
+  display: flex;
+  color: #4a4a4a;
+
+  align-items: start;
+  text-align: left;
+  line-height: 1.6;
+  /* Align items in the center vertically */
+  margin-bottom: 50px;
+  padding-left: 98px;
+
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.classification {
+  font-size: 20px;
 }
