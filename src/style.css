@@ -750,7 +750,7 @@ p {
 }
 
 .contact-button {
-  background: rgb(31, 163, 11);
+  background: rgb(88, 141, 76);
   color: white;
   border: none;
   border-radius: 10px;
@@ -768,12 +768,12 @@ p {
 }
 
 .contact-button:hover {
-  background: rgb(28, 142, 10);
+  background: rgb(84, 135, 71);
 }
 
 .contact-button:active{
-  background: rgb(24, 120, 9);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+  background: rgb(82, 133, 70);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
 }
 
 /** ERROR PAGE **/
