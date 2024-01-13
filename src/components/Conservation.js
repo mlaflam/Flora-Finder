@@ -3,6 +3,22 @@ import conservationIcon from '../icons/conservation-icon-4.png';
 import ConservationStatus from './ConservationStatus';
 
 const Conservation = ({ plantData, id }) => {
+
+  const getStatusTitle = (roundedSRank) => {
+    const statusTitles = {
+      'NX': 'Presumed Extinct',
+      'NH': 'Possibly Extinct',
+      'N1': 'Critically Imperiled',
+      'N2': 'Imperiled',
+      'N3': 'Vulnerable',
+      'N4': 'Apparently Secure',
+      'N5': 'Secure',
+      'NNR': 'No Status Rank',
+    };
+
+    return statusTitles[roundedSRank] || 'Unknown Status';
+  };
+
   return (
     <div className='sections-container-inner' id={id}>
       <div className='plant-page-header-container'>
@@ -66,7 +82,10 @@ const Conservation = ({ plantData, id }) => {
             <div className={plantData.plant.gRank !== 'G5' ? "bottom-text-visible" : "bottom-text-hidden"}>Secure</div>
           </div>
           
-          <div className={`circle ${plantData.plant.gRank === 'GNR' ? "visible" : "hidden"}`}> No Status Rank
+          <div className={`circle ${plantData.plant.gRank !== 'GX' && plantData.plant.gRank !== 'GH' &&
+            plantData.plant.gRank !== 'G1' && plantData.plant.gRank !== 'G2' && plantData.plant.gRank !== 'G3' &&
+            plantData.plant.gRank !== 'G4' && plantData.plant.gRank !== 'G5' ? "visible" : "hidden"}`}>
+            No Status Rank
           </div>
 
         </div>
@@ -93,7 +112,7 @@ const Conservation = ({ plantData, id }) => {
 
           <ConservationStatus plantData={plantData} roundedSRank='S5' />
 
-          <ConservationStatus plantData={plantData} roundedSRank='SNR' />
+          <ConservationStatus plantData={plantData} roundedSRank='SNA' />
         
         </div>
 

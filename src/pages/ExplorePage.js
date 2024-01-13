@@ -159,7 +159,7 @@ function ExplorePage() {
           }],
           pagingOptions: {
             page: null,
-            recordsPerPage: 4,
+            recordsPerPage: 12,
           },
           recordSubtypeCriteria: [],
           modifiedSince: null,

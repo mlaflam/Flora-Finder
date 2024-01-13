@@ -19,7 +19,7 @@ const getStatusTitle = (roundedSRank) => {
     'S3': 'Vulnerable',
     'S4': 'Apparently Secure',
     'S5': 'Secure',
-    'SNR': 'No Status Rank',
+    'SNA': 'No Status Rank',
   };
 
   return statusTitles[roundedSRank] || 'Unknown Status';
