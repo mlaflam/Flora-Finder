@@ -786,7 +786,7 @@ p {
 
 
 .link-back-1, .link-back-2 {
-  background: rgb(115, 187, 104);
+  background: rgb(88, 141, 76);
   color: white;
   border: none;
   border-radius: 10px;
@@ -803,11 +803,9 @@ p {
 }
 
 .link-back-2 {
-  border-color: rgb(115, 187, 104);
   background: white;
   border: solid;
-  
-  color: rgb(115, 187, 104);
+  color: rgb(88, 141, 76);
   border-radius: 10px;
 }
 
@@ -824,12 +822,25 @@ p {
   }
 }
 
-.link-back-2:active {
-  color: rgb(0, 72, 0);
+.link-back-1:hover {
+  background-color: rgb(72, 122, 61);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
 }
 
+.link-back-1:active {
+  background-color: rgb(51, 96, 39);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+}
+
+
 .link-back-2:hover {
-  color: green;
+  color: rgb(72, 122, 61);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+}
+
+.link-back-2:active {
+  color: rgb(51, 96, 39);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
 }
 
 .error-info-first, 
