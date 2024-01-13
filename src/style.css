@@ -1042,6 +1042,16 @@ p {
 
 .link-to-plant {
   text-decoration: none;
+  color: black;
+}
+
+
+.link-to-plant:active {
+  color: black;
+}
+
+.link-to-plant:hover {
+  color: black;
 }
 
 .link-to-plant:visited {
