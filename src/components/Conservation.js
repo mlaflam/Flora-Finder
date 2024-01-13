@@ -2,11 +2,11 @@ import React from 'react'
 import conservationIcon from '../icons/conservation-icon-2.png';
 import conservationStatusIcon from '../icons/conservation-status-icon.png';
 
-const Conservation = ({ plantData }) => {
+const Conservation = ({ plantData, id }) => {
   return (
-    <div className='sections-container-inner'>
+    <div className='sections-container-inner' id={id}>
       <div className='plant-page-header-container'>
-        <img className="plant-page-header-icon" src={conservationIcon} alt="Leaf Icon" />
+        <img className="plant-page-header-icon" src={conservationIcon} alt="Conservation Icon" />
         <div className='plant-page-header'>Conservation Status</div>
       </div>
 

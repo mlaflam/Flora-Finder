@@ -16,20 +16,20 @@ function App() {
 
     <BrowserRouter>
       <ScrollToTop /> {/* Include the ScrollToTop component */}
-        <Routes>
-          <Route index element={<ExplorePage />} />
-          <Route path='/Explore' element={<ExplorePage />} />
-          <Route path="/PlantPage/:scientificName" element={<ExamplePlantPage />} />
-          <Route path='/About' element={<AboutPage />} />
+      <Routes>
+        <Route index element={<ExplorePage />} />
+        <Route path='/Explore' element={<ExplorePage />} />
+        <Route path="/PlantPage/:scientificName" element={<ExamplePlantPage />} />
+        <Route path='/About' element={<AboutPage />} />
           
-          <Route name="About" path="/About" handler={<AboutPage />}>
-            <Route name="Contact" path="#Contact" handler={<Contact />} />
-          </Route>
+        <Route name="About" path="/About" handler={<AboutPage />}>
+          <Route name="Contact" path="#Contact" handler={<Contact />} />
+        </Route>
 
-          <Route path='/SignIn' element={<SignInPage />} />
-          <Route path='*' element={<ErrorPage />} />
+        <Route path='/SignIn' element={<SignInPage />} />
+        <Route path='*' element={<ErrorPage />} />
 
-        </Routes>
+      </Routes>
       
       </BrowserRouter>
       

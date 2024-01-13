@@ -2,10 +2,10 @@ import React from 'react'
 import usaMap from '../icons/usa_states_map-scaled.jpeg';
 import globeIcon from '../icons/globe-icon.png';
 
-const Distributions = ({ plantData }) => {
+const Distributions = ({ plantData, id }) => {
   return (
 
-    <div className='sections-container-inner'>
+    <div className='sections-container-inner' id={id}>
       <div className='plant-page-header-container'>
         <img className="plant-page-header-icon" src={globeIcon} alt="Globe Icon" />
         <div className='plant-page-header'>Distributions</div>

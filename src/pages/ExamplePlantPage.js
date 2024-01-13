@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { HashLink as Link } from 'react-router-hash-link';
 
 import '../style.css';
 import Navbar from '../components/Navbar';
@@ -9,20 +8,31 @@ import Classification from '../components/Classification';
 import Distributions from '../components/Distributions';
 import Conservation from '../components/Conservation';
 import ErrorPage from "./ErrorPage";
-
-
 import plantPreview from '../icons/plant-drawing-1.png';
-
 
 const ExamplePlantPage = () => {
   const { scientificName } = useParams();
   const location = useLocation();
   const plantData = location.state;
 
+  const pagelink = '/PlantPage/' + scientificName + '/Classification';
+
   console.log({ scientificName });
   console.log("plantData");
   console.log(plantData);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 90; // Adjust this value based on how much less you want to scroll
+      const elementPosition = element.offsetTop - offset;
+
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
   if (!plantData) {
     return <ErrorPage />;
   }
@@ -60,21 +70,39 @@ const ExamplePlantPage = () => {
               <div className='sidebar-title'>Contents</div>
 
               <div class="vl">
-                <div className='sidebar-section'>Classification</div>
-                <div className='sidebar-section'>Distributions</div>
-                <div className='sidebar-section'>Conservation Status</div>
-                <div className='sidebar-section'>References</div>
+                <div
+                  className="sidebar-section"
+                  onClick={() => scrollToSection('classification-section')}
+                >
+                  Classification
+                </div>
+                <div
+                  className="sidebar-section"
+                  onClick={() => scrollToSection('distributions-section')}
+                >
+                  Distributions
+                </div>
+                <div
+                  className="sidebar-section"
+                  onClick={() => scrollToSection('conservation-section')}
+                >
+                  Conservation Status
+                </div>
+                <div
+                  className="sidebar-section"
+                  onClick={() => scrollToSection('references-section')}
+                >
+                  References
+                </div>
               </div>
 
             </div>
 
             <div className='sections-container-outer'>
 
-              <Classification plantData={plantData} />
-
-              <Distributions plantData={plantData} />
-
-              <Conservation plantData={plantData} />
+              <Classification plantData={plantData} id="classification-section" />
+              <Distributions plantData={plantData} id="distributions-section" />
+              <Conservation plantData={plantData} id="conservation-section" />
 
 
             </div>
