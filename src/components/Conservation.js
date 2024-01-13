@@ -1,5 +1,5 @@
 import React from 'react'
-import conservationIcon from '../icons/conservation-icon-2.png';
+import conservationIcon from '../icons/conservation-icon-4.png';
 import conservationStatusIcon from '../icons/conservation-status-icon.png';
 
 const Conservation = ({ plantData, id }) => {

@@ -888,7 +888,7 @@ p {
 }
 
 .log-in-button {
-  background: rgb(115, 187, 104);
+  background: rgb(88, 141, 76);
   color: white;
   border: none;
   border-radius: 7px;
@@ -906,12 +906,12 @@ p {
 }
 
 .log-in-button:hover {
-  background: rgb(105, 178, 94);
+  background: rgb(84, 135, 71);
 }
 
 .log-in-button:active {
-  background: rgb(62, 156, 48);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+  background: rgb(82, 133, 70);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
 }
 
 .sign-in-extras {
@@ -945,7 +945,19 @@ p {
   color: #1982c4;
 }
 
+.forgot-password:hover,
+.guest:hover, 
+.create:hover {
+  color: #0966a0;
+  cursor: pointer;
+}
 
+.forgot-password:active,
+.guest:active,
+.create:active {
+  color: #02426a;
+  cursor: pointer;
+}
 
 /* FOOTER */
 
@@ -1176,18 +1188,16 @@ p {
   margin-left: -5px;
 }
 
-.plant-page-header-icon {
+.plant-page-header-icon,
+.plant-page-header-icon-1 {
   height: 40px;
   padding: 10px;
   margin-left: -10px;
   margin-right: 10px;
 }
 
-.plant-page-search-icon {
-  height: 35px;
-  padding: 10px;
-  margin-left: -10px;
-  margin-right: 10px;
+.plant-page-header-icon-1 {
+  height: 43px;
 }
 
 .plant-info-container {

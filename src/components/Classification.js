@@ -1,12 +1,12 @@
 import React from 'react'
 import leafIconThree from '../icons/leaf-icon-3.png';
-import searchIcon from '../icons/search-icon-3.png';
+import taxonIcon from '../icons/bintree-icon.png';
 
 const Classification = ({ plantData, id }) => {
   return (
     <div className='sections-container-inner-1' id={id}>
       <div className='plant-page-header-container'>
-        <img className="plant-page-search-icon" src={searchIcon} alt="Search Icon" />
+        <img className="plant-page-header-icon-1" src={taxonIcon} alt="Taxon Icon" />
         <div className='plant-page-header'>Classification</div>
       </div>
       {/*<hr className='divider-2'></hr>*/}
