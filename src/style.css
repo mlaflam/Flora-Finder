@@ -1200,6 +1200,9 @@ p {
   width: 25%;
   height: 300px;
   margin-top: 15px;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
 }
 
 .sidebar-title {

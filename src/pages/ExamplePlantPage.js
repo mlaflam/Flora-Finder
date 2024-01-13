@@ -1,4 +1,5 @@
 import { useParams, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 
 import '../style.css';
@@ -33,6 +34,29 @@ const ExamplePlantPage = () => {
       });
     }
   };
+
+  useEffect(() => {
+    const navbarHeight = document.querySelector('.header').offsetHeight;
+    const sidebar = document.querySelector('.sidebar');
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= navbarHeight) {
+        sidebar.style.top = `${navbarHeight + 30}px`;
+      } else {
+        sidebar.style.top = '0';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   if (!plantData) {
     return <ErrorPage />;
   }
