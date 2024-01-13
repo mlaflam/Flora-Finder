@@ -750,7 +750,7 @@ p {
 }
 
 .contact-button {
-  background: rgb(115, 187, 104);
+  background: rgb(31, 163, 11);
   color: white;
   border: none;
   border-radius: 10px;
@@ -768,11 +768,11 @@ p {
 }
 
 .contact-button:hover {
-  background: rgb(105, 178, 94);
+  background: rgb(28, 142, 10);
 }
 
 .contact-button:active{
-  background: rgb(62, 156, 48);
+  background: rgb(24, 120, 9);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
 }
 
@@ -1070,11 +1070,64 @@ p {
   color: inherit;
 }
 
-.plant-page-main {
+
+#plant-box-container {
+  /**background: rgb(127, 178, 135); **/
+  padding: 20px;
   margin-top: 150px;
+  width: 65%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  margin-left: calc(10% - 45px);
 }
 
-.plant-page-info {
+.plant-title-container {
+  display: flex;
+}
+
+.plant-container {
+  margin-bottom: 10px;
+  padding-left: 25px;
+}
+
+.divider {
+  width: 90%;
+  margin-bottom: 40px;
+  font-weight: 400;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+}
+
+
+.divider-2 {
+  width: 70%;
+  margin-bottom: 20px;
+  float: left;
+  font-weight: 400;
+  border: 1px solid #d7d7d7;
+  border-radius: 5px;
+}
+
+.plant-page-block {
+  background-color: rgb(222, 239, 218);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 275px;
+  margin-bottom: 5px;
+  border: solid;
+  border-radius: 5px;
+}
+
+.plant-title {
+  display: flex;
+  font-size: 55px;
+  font-family: Roboto;
+}
+
+.plant-title-2 {
   display: flex;
   color: #4a4a4a;
 
@@ -1083,12 +1136,155 @@ p {
   line-height: 1.6;
   /* Align items in the center vertically */
   margin-bottom: 50px;
-  padding-left: 98px;
 
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Roboto Mono", monospace;
 }
 
-.classification {
+.plant-page-header-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.plant-page-header {
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 7px;
+  margin-left: -5px;
+}
+
+.plant-page-header-icon {
+  height: 40px;
+  padding: 10px;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+.plant-info-container {
+  display: flex;
+}
+
+.sidebar {
+  border: solid;
+  flex: none;
+  width: 25%;
+  height: 500px;
+  margin-top: 15px;
+}
+
+.sidebar-title {
+  background: rgb(31, 163, 11);
+  color: white;
+  border: none;
+  border-radius: 5px;
+
   font-size: 20px;
+  width: 90%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.sections-container-outer {
+  width: 75%;
+}
+
+.sections-container-inner {
+  /**background: rgb(127, 178, 135); **/
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: 40px;
+  width: 100%;
+}
+
+.class-container {
+  margin-left: 60px;
+}
+
+.class-scien {
+  display: flex;
+  justify-content: start;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 10px;
+
+}
+
+.class-1 {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  margin-left: 10px;
+}
+
+
+.class-k,
+.class-p,
+.class-c,
+.class-o,
+.class-f,
+.class-s {
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(11, 99, 11);
+  margin-bottom: 5px;
+}
+
+.class-k {
+  margin-top: 40px;
+  margin-left: 0px;
+}
+
+.class-p {
+  margin-left: 35px;
+}
+
+.class-c {
+  margin-left: 70px;
+}
+
+.class-o {
+  margin-left: 105px;
+}
+
+.class-f {
+  margin-left: 140px;
+}
+
+.class-s {
+  margin-left: 175px;
+}
+
+.class-2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+  margin-left: 10px;
+}
+
+.map {
+  height: 500px;
+  width: 700px;
+  border: solid;
+}
+
+.conservation-img {
+  height: 110px;
+  margin-bottom: 30px;
+}
+.conservation-title {
+  display: flex;
+  justify-content: start;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 20px;
 }
