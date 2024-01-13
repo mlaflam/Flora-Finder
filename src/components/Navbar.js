@@ -1,7 +1,7 @@
 import React from 'react'
 import '../style.css';
-import leafIconThree from '../icons/leaf-icon-3.png';
-import gitIcon from '../icons/git-icon.png';
+import leafIconThree from '../icons/leaf-icon-white.png';
+import gitIcon from '../icons/git-icon-white.png';
 import { Link } from "react-router-dom";
 
 

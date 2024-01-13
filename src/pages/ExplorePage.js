@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import '../style.css';
 import ExamplePlant from '../components/Example-Plant';
 import Navbar from '../components/Navbar';
-import compassIcon from '../icons/compass-icon-4.png';
+import compassIcon from '../icons/compass-icon-6.png';
 import searchIcon from '../icons/search-icon-3.png';
 import xIcon from '../icons/x-button-icon.png';
 import Footer from '../components/Footer';

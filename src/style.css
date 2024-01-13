@@ -208,7 +208,8 @@ p {
   right: 0;
   z-index: 100;
 
-  background-color: rgb(222, 239, 218);
+  background-color: rgb(62, 186, 13);
+  color: white;
   border-color: black;
   border-width: thin;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
@@ -289,7 +290,7 @@ p {
   font-family: Roboto;
   font-weight: 300;
 
-  color: black;
+  color: white;
   width: 200px;
 }
 
@@ -307,36 +308,13 @@ p {
   align-items: center;
 
   position: relative;
+  color: white;
 }
 
-.sign-in-container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  /* Adjust the width to change the length of the border */
-  border-bottom: 1px solid transparent;
-  /* Set a transparent border by default */
-  transition: width 0.15s, border-bottom-color 0.15s;
-  /* Add width and border-bottom-color transitions */
-}
 
-.sign-in-container:hover::after {
-  width: 50%;
-  /* Adjust the width on hover */
-  border-bottom-color: green;
-  /* Change border color on hover */
-}
-
-.sign-in-container:hover {
-  color: green;
-  cursor: pointer;
-}
 
 .sign-in-container:active {
-  color: rgb(0, 72, 0);
+  color: rgb(218, 218, 218);
   cursor: pointer;
   align-items: center;
 }
@@ -353,21 +331,21 @@ p {
 
 .title-link {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .LINK {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 
 .LINK:active {
-  color:rgb(0, 72, 0);
+  color:rgb(218, 218, 218);
 }
 
 .LINK:hover {
-  color: green;
+  color: white;
 }
 
 .LINK:visited {
@@ -406,18 +384,19 @@ p {
 .header-name-left:hover::after {
   width: 80%;
   /* Adjust the width on hover */
-  border-bottom-color: green;
+  border-bottom-color: white;
   /* Change border color on hover */
 }
 
 .header-name-left:hover {
-  color: green;
+  color: white;
   cursor: pointer;
   align-items: center;
+  border-bottom-color: rgb(218, 218, 218);
 }
 
 .header-name-left:active {
-  color: rgb(0, 72, 0);
+  color: rgb(218, 218, 218);
   cursor: pointer;
   align-items: center;
 }
