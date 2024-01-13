@@ -1266,6 +1266,7 @@ p {
   display: flex;
   justify-content: start;
   margin-top: 40px;
+  margin-left: 40px;
 }
 
 .classes-container {
