@@ -33,15 +33,16 @@ const ExamplePlantPage = () => {
   return (
 
     <div>
-      <div className="block-main">
+
+      <div className="plant-block-main">
         <Navbar />
 
-        <div className="block">
+        <div className='plant-page-block'>
 
           <div id="plant-box-container">
             <div className="plant-title-container">
-              <div className="plant-page-block">
-                  <img className="plant-preview" src={plantPreview} alt="Plant Preview" />
+              <div className="plant-img-block">
+                <img className="plant-preview" src={plantPreview} alt="Plant Preview" />
               </div>
 
               <div className="plant-container">
@@ -50,7 +51,7 @@ const ExamplePlantPage = () => {
               </div>
 
             </div>
-           
+
           </div>
 
           <hr className='divider'></hr>
@@ -59,9 +60,15 @@ const ExamplePlantPage = () => {
 
             <div className='sidebar'>
               <div className='sidebar-title'>Contents</div>
-              <div>Classification</div>
-              <div>Distributions</div>
-              <div>Conservation Status</div>
+
+              <div class="vl">
+                <div className='sidebar-section'>Classification</div>
+                <div className='sidebar-section'>Distributions</div>
+                <div className='sidebar-section'>Conservation Status</div>
+                <div className='sidebar-section'>References</div>
+              </div>
+
+
 
             </div>
 
@@ -79,7 +86,7 @@ const ExamplePlantPage = () => {
 
 
                   <div className='class-scien'> Other Common Names:
-                    <div className='class-1 '> {plantData.plant.speciesGlobal.otherCommonNames}</div></div>
+                    <div className='class-1 '> {plantData.plant.speciesGlobal.otherCommonNames[0]}</div></div>
 
 
                   <div className='class-k'>Kingdom:
@@ -98,8 +105,8 @@ const ExamplePlantPage = () => {
 
                 </div>
 
-               
-               
+
+
               </div>
 
               <div className='sections-container-outer'>
@@ -112,20 +119,20 @@ const ExamplePlantPage = () => {
                   <div className='class-container'>
                     <div className='map-container'>
                       <img className="map" src={usaMap} alt="map Icon" />
-                      </div>
-                    
-
                     </div>
+
+
+                  </div>
                 </div>
 
 
               </div>
 
-              
+
               <div className='sections-container-inner'>
                 <div className='plant-page-header-container'>
                   <img className="plant-page-header-icon" src={conservationIcon} alt="Leaf Icon" />
-                  <div className='plant-page-header'>Conservation Status</div>  
+                  <div className='plant-page-header'>Conservation Status</div>
                 </div>
 
                 <div className='class-container'>
@@ -136,38 +143,52 @@ const ExamplePlantPage = () => {
 
                   <div className='class-scien'> United States:
                     <div className='class-1 '> {plantData.plant.nations[0].roundedNRank}</div></div>
-                  
-                  <div className='class-scien'> Secure:
-                    <div className='class-1 '> states</div></div>
-                  
-                  <div className='class-scien'> Secure:
-                    <div className='class-1 '> states</div></div>
-                  
-                  <div className='class-scien'> Secure:
-                    <div className='class-1 '> states</div></div>
-                  
+
                   <div className='class-scien'> Secure:
                     <div className='class-1 '> states</div></div>
 
+                  <div className='class-scien'> Apparently Secure:
+                    <div className='class-1 '> states</div></div>
+
+                  <div className='class-scien'> Vulnerable:
+                    <div className='class-1 '> states</div></div>
+
+                  <div className='class-scien'> Vulnerable:
+                    <div className='class-1 '> states</div></div>
+
+                  <div className='class-scien'> Critically Imperiled:
+                    <div className='class-1 '> states</div></div>
+
+                  <div className='class-scien'> Possibly Extirpated:
+                    <div className='class-1 '> states</div></div>
+
+                  <div className='class-scien'> Presumed Extirpated:
+                    <div className='class-1 '> states</div></div>
+
+                  <div className='class-scien'> No Status Rank:
+                    <div className='class-1 '> states</div></div>
+
                 </div>
-               
-                
+
+
               </div>
 
             </div>
 
-            
+
 
           </div>
-        
+
+
 
         </div>
 
-          <Footer />
-        
+
+        <Footer />
+
       </div>
     </div>
-    
+
   );
 }
 

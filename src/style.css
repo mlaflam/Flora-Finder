@@ -1070,11 +1070,24 @@ p {
   color: inherit;
 }
 
+.plant-block-main {
+  display: block;
+  width: 100vw;
+  max-width: 100%;
+}
+
+
+.plant-page-block{
+  display: block;
+  width: 100vw;
+  max-width: 90%;
+  padding: 60px;
+}
 
 #plant-box-container {
   /**background: rgb(127, 178, 135); **/
   padding: 20px;
-  margin-top: 150px;
+  margin-top: 90px;
   width: 65%;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1109,7 +1122,7 @@ p {
   border-radius: 5px;
 }
 
-.plant-page-block {
+.plant-img-block {
   background-color: rgb(222, 239, 218);
   display: flex;
   justify-content: center;
@@ -1165,10 +1178,10 @@ p {
 }
 
 .sidebar {
-  border: solid;
+  /*border: solid;*/
   flex: none;
   width: 25%;
-  height: 500px;
+  height: 300px;
   margin-top: 15px;
 }
 
@@ -1185,6 +1198,33 @@ p {
   padding-left: 20px;
 
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.vl {
+  border-left: solid;
+  border-left-color: rgb(31, 163, 11);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.sidebar-section {
+  border-radius: 5px;
+  width: 80%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.sidebar-section:hover {
+  background-color: rgb(243, 243, 243);
+  cursor: pointer;
+}
+
+.sidebar-section:active {
+  background-color: rgb(237, 237, 237);
+  cursor: pointer;
 }
 
 .sections-container-outer {
@@ -1280,6 +1320,7 @@ p {
   height: 110px;
   margin-bottom: 30px;
 }
+
 .conservation-title {
   display: flex;
   justify-content: start;
