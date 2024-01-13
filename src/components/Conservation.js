@@ -10,9 +10,43 @@ const Conservation = ({ plantData, id }) => {
         <div className='plant-page-header'>Conservation Status</div>
       </div>
 
+
       <div className='class-container'>
         <div className='conservation-title'> World Status: </div>
-        <img className="conservation-img" src={conservationStatusIcon} alt="Conservation status Icon" />
+        <div className='conservation-status-container'>
+
+          <div className={`circle ${plantData.plant.gRank === 'GX' ? "visible" : "hidden"}`}> GX
+            <div className={plantData.plant.gRank === 'GX' ? "text-visible" : "text-hidden"}>Presumed Extinct</div>
+          </div>
+
+          <div className={`circle ${plantData.plant.gRank === 'GH' ? "visible" : "hidden"}`}> GH
+            <div className={plantData.plant.gRank === 'GH' ? "text-visible" : "text-hidden"}>Possibly Extinct</div>
+          </div>
+
+          <div className={`circle ${plantData.plant.gRank === 'G1' ? "visible" : "hidden"}`}> G1
+            <div className={plantData.plant.gRank === 'G1' ? "text-visible" : "text-hidden"}>Critically Imperiled</div>
+          </div>
+          
+          <div className={`circle ${plantData.plant.gRank === 'G2' ? "visible" : "hidden"}`}> G2
+            <div className={plantData.plant.gRank === 'G2' ? "text-visible" : "text-hidden"}>Imperiled</div>
+          </div>
+
+          <div className={`circle ${plantData.plant.gRank === 'G3' ? "visible" : "hidden"}`}> G3
+            <div className={plantData.plant.gRank === 'G3' ? "text-visible" : "text-hidden"}>Vulnerable</div>
+          </div>
+        
+          <div className={`circle ${plantData.plant.gRank === 'G4' ? "visible" : "hidden"}`}> G4
+            <div className={plantData.plant.gRank === 'G4' ? "text-visible" : "text-hidden"}>Apparently Secure</div>
+          </div>
+
+          <div className={`circle ${plantData.plant.gRank === 'G5' ? "visible" : "hidden"}`}> G5
+            <div className={plantData.plant.gRank === 'G5' ? "text-visible" : "text-hidden"}>Secure</div>
+          </div>
+          
+          <div className={`circle ${plantData.plant.gRank === 'GNR' ? "visible" : "hidden"}`}> No Status Rank
+          </div>
+
+        </div>
 
         <div className='conservation-title'> National & State Statuses: </div>
 

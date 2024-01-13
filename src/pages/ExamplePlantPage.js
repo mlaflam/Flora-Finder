@@ -93,7 +93,7 @@ const ExamplePlantPage = () => {
             <div className='sidebar'>
               <div className='sidebar-title'>Contents</div>
 
-              <div class="vl">
+              <div className="vl">
                 <div
                   className="sidebar-section"
                   onClick={() => scrollToSection('classification-section')}

@@ -22,7 +22,7 @@ const Classification = ({ plantData, id }) => {
 
         <div className='classes-outer-container'>
 
-          <div class="triangle"></div>
+          <div className="triangle"></div>
           <div className='classes-container'>
             <div className='class-k'>Kingdom:
               <div className='class-2 '> Plantae </div> </div>
