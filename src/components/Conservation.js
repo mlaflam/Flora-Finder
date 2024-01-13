@@ -1,5 +1,6 @@
 import React from 'react'
 import conservationIcon from '../icons/conservation-icon-4.png';
+import ConservationStatus from './ConservationStatus';
 
 const Conservation = ({ plantData, id }) => {
   return (
@@ -72,32 +73,29 @@ const Conservation = ({ plantData, id }) => {
 
         <div className='conservation-title'> National & State Statuses: </div>
 
-        <div className='class-scien'> United States:
-          <div className='class-1 '> {plantData.plant.nations[0].roundedNRank}</div></div>
+        
+        <div className='conservation-title-2'> United States:
+          <div className='conservation-subtitle'> {plantData.plant.nations[0].roundedNRank}</div></div>
 
-        <div className='class-scien'> Secure:
-          <div className='class-1 '> states</div></div>
+        <div className="vl-2">
 
-        <div className='class-scien'> Apparently Secure:
-          <div className='class-1 '> states</div></div>
+          <ConservationStatus plantData={plantData} roundedSRank='SX' />
 
-        <div className='class-scien'> Vulnerable:
-          <div className='class-1 '> states</div></div>
+          <ConservationStatus plantData={plantData} roundedSRank='SH' />
+        
+          <ConservationStatus plantData={plantData} roundedSRank='S1' />
 
-        <div className='class-scien'> Vulnerable:
-          <div className='class-1 '> states</div></div>
+          <ConservationStatus plantData={plantData} roundedSRank='S2' />
 
-        <div className='class-scien'> Critically Imperiled:
-          <div className='class-1 '> states</div></div>
+          <ConservationStatus plantData={plantData} roundedSRank='S3' />
 
-        <div className='class-scien'> Possibly Extirpated:
-          <div className='class-1 '> states</div></div>
+          <ConservationStatus plantData={plantData} roundedSRank='S4' />
 
-        <div className='class-scien'> Presumed Extirpated:
-          <div className='class-1 '> states</div></div>
+          <ConservationStatus plantData={plantData} roundedSRank='S5' />
 
-        <div className='class-scien'> No Status Rank:
-          <div className='class-1 '> states</div></div>
+          <ConservationStatus plantData={plantData} roundedSRank='SNR' />
+        
+        </div>
 
       </div>
 

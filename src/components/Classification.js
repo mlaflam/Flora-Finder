@@ -15,9 +15,14 @@ const Classification = ({ plantData, id }) => {
         <div className='class-scien'> Scientific Name:
           <div className='class-1 '> {plantData.plant.scientificName}</div></div>
 
-
-        <div className='class-scien'> Other Common Names:
-          <div className='class-1 '> {plantData.plant.speciesGlobal.otherCommonNames[0]}</div></div>
+        <div className='class-scien'>
+          Other Common Names:
+          <div className='class-1 ' >
+          {plantData.plant.speciesGlobal.otherCommonNames.length > 0
+            ? plantData.plant.speciesGlobal.otherCommonNames.join(', ')
+              : 'N/A'}
+          </div>
+        </div>
 
 
         <div className='classes-outer-container'>

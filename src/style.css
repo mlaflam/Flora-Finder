@@ -1314,9 +1314,7 @@ p {
   font-weight: 500;
   width: 100%;
   margin-bottom: 10px;
-
 }
-
 
 .class-1 {
   font-size: 18px;
@@ -1324,7 +1322,6 @@ p {
   color: black;
   margin-left: 10px;
 }
-
 
 .class-k,
 .class-p,
@@ -1383,10 +1380,47 @@ p {
 .conservation-title {
   display: flex;
   justify-content: start;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
   width: 100%;
   margin-bottom: 30px;
+}
+
+.conservation-title-2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.conservation-subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.conservation-subtitle-2 {
+  display: flex;
+  justify-content: start;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.vl-2 {
+  border-left: solid;
+  border-width: 2px;
+  border-radius: 1px;
+  border-left-color: rgb(182, 182, 182);
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 .conservation-status-container {
@@ -1394,7 +1428,7 @@ p {
   align-items: center;
   justify-content: start;
   padding: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 
