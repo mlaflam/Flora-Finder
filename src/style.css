@@ -1241,7 +1241,8 @@ p {
   width: 75%;
 }
 
-.sections-container-inner {
+.sections-container-inner,
+.sections-container-inner-1 {
   /**background: rgb(127, 178, 135); **/
   padding-left: 20px;
   padding-right: 20px;
@@ -1253,8 +1254,32 @@ p {
   width: 100%;
 }
 
+.sections-container-inner-1 {
+  margin-bottom: 30px;
+}
+
 .class-container {
   margin-left: 60px;
+}
+
+.classes-outer-container {
+  display: flex;
+  justify-content: start;
+  margin-top: 40px;
+}
+
+.classes-container {
+  margin-left: -110px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  /* Adjust the size of the triangle by changing this value */
+  border-bottom: 220px solid rgb(222, 239, 218);
+  /* Adjust the size and color of the triangle by changing these values */
+  transform: rotate(90deg);
 }
 
 .class-scien {
@@ -1266,6 +1291,7 @@ p {
   margin-bottom: 10px;
 
 }
+
 
 .class-1 {
   font-size: 18px;
@@ -1284,12 +1310,12 @@ p {
   display: flex;
   font-size: 18px;
   font-weight: 500;
-  color: rgb(11, 99, 11);
+  color: rgb(52, 106, 40);
   margin-bottom: 5px;
 }
 
 .class-k {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 0px;
 }
 
