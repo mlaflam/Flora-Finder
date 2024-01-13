@@ -1,6 +1,5 @@
 import React from 'react'
 import conservationIcon from '../icons/conservation-icon-4.png';
-import conservationStatusIcon from '../icons/conservation-status-icon.png';
 
 const Conservation = ({ plantData, id }) => {
   return (
@@ -15,32 +14,55 @@ const Conservation = ({ plantData, id }) => {
         <div className='conservation-title'> World Status: </div>
         <div className='conservation-status-container'>
 
-          <div className={`circle ${plantData.plant.gRank === 'GX' ? "visible" : "hidden"}`}> GX
-            <div className={plantData.plant.gRank === 'GX' ? "text-visible" : "text-hidden"}>Presumed Extinct</div>
+          <div className='circle-container'>
+            <div className={`circle ${plantData.plant.gRank === 'GX' ? "visible" : "hidden"}`}> GX
+              <div className={plantData.plant.gRank === 'GX' ? "text-visible" : "text-hidden"}>Presumed Extinct</div>
+            </div>
+            <div className={plantData.plant.gRank !== 'GX' ? "bottom-text-visible" : "bottom-text-hidden"}>Presumed Extinct</div>
           </div>
 
-          <div className={`circle ${plantData.plant.gRank === 'GH' ? "visible" : "hidden"}`}> GH
-            <div className={plantData.plant.gRank === 'GH' ? "text-visible" : "text-hidden"}>Possibly Extinct</div>
-          </div>
-
-          <div className={`circle ${plantData.plant.gRank === 'G1' ? "visible" : "hidden"}`}> G1
-            <div className={plantData.plant.gRank === 'G1' ? "text-visible" : "text-hidden"}>Critically Imperiled</div>
+          <div className='circle-container'>
+            <div className={`circle ${plantData.plant.gRank === 'GH' ? "visible" : "hidden"}`}> GH
+              <div className={plantData.plant.gRank === 'GH' ? "text-visible" : "text-hidden"}>Possibly Extinct</div>
+            </div>
+            <div className={plantData.plant.gRank !== 'GH' ? "bottom-text-visible" : "bottom-text-hidden"}>Possibly Extinct</div>
           </div>
           
-          <div className={`circle ${plantData.plant.gRank === 'G2' ? "visible" : "hidden"}`}> G2
-            <div className={plantData.plant.gRank === 'G2' ? "text-visible" : "text-hidden"}>Imperiled</div>
+          <div className='circle-container'>
+            <div className={`circle ${plantData.plant.gRank === 'G1' ? "visible" : "hidden"}`}> G1
+              <div className={plantData.plant.gRank === 'G1' ? "text-visible" : "text-hidden"}>Critically Imperiled</div>
+            </div>
+            <div className={plantData.plant.gRank !== 'G1' ? "bottom-text-visible" : "bottom-text-hidden"}>Critically Imperiled</div>
           </div>
 
-          <div className={`circle ${plantData.plant.gRank === 'G3' ? "visible" : "hidden"}`}> G3
-            <div className={plantData.plant.gRank === 'G3' ? "text-visible" : "text-hidden"}>Vulnerable</div>
-          </div>
-        
-          <div className={`circle ${plantData.plant.gRank === 'G4' ? "visible" : "hidden"}`}> G4
-            <div className={plantData.plant.gRank === 'G4' ? "text-visible" : "text-hidden"}>Apparently Secure</div>
+         
+          <div className='circle-container'>
+            <div className={`circle ${plantData.plant.gRank === 'G2' ? "visible" : "hidden"}`}> G2
+              <div className={plantData.plant.gRank === 'G2' ? "text-visible" : "text-hidden"}>Imperiled</div>
+            </div>
+            <div className={plantData.plant.gRank !== 'G2' ? "bottom-text-visible" : "bottom-text-hidden"}>Imperiled</div>
           </div>
 
-          <div className={`circle ${plantData.plant.gRank === 'G5' ? "visible" : "hidden"}`}> G5
-            <div className={plantData.plant.gRank === 'G5' ? "text-visible" : "text-hidden"}>Secure</div>
+          <div className='circle-container'>
+            <div className={`circle ${plantData.plant.gRank === 'G3' ? "visible" : "hidden"}`}> G3
+              <div className={plantData.plant.gRank === 'G3' ? "text-visible" : "text-hidden"}>Vulnerable</div>
+            </div>
+            <div className={plantData.plant.gRank !== 'G3' ? "bottom-text-visible" : "bottom-text-hidden"}>Vulnerable</div>
+          </div>
+          
+
+          <div className='circle-container'>
+            <div className={`circle ${plantData.plant.gRank === 'G4' ? "visible" : "hidden"}`}> G4
+              <div className={plantData.plant.gRank === 'G4' ? "text-visible" : "text-hidden"}>Apparently Secure</div>
+            </div>
+            <div className={plantData.plant.gRank !== 'G4' ? "bottom-text-visible" : "bottom-text-hidden"}>Apparently Secure</div>
+          </div>
+
+          <div className='circle-container'>
+            <div className={`circle ${plantData.plant.gRank === 'G5' ? "visible" : "hidden"}`}> G5
+              <div className={plantData.plant.gRank === 'G5' ? "text-visible" : "text-hidden"}>Secure</div>
+            </div>
+            <div className={plantData.plant.gRank !== 'G5' ? "bottom-text-visible" : "bottom-text-hidden"}>Secure</div>
           </div>
           
           <div className={`circle ${plantData.plant.gRank === 'GNR' ? "visible" : "hidden"}`}> No Status Rank
