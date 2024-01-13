@@ -33,7 +33,7 @@ const ErrorFooter = () => {
           <div className='footer-title'>Learn More</div>
 
           <div >
-            <a id="github-container" href="https://github.com/mlaflam/flora-finder-website" target='_blank'>
+            <a id="github-container" className='LINK' href="https://github.com/mlaflam/flora-finder-website" target='_blank'>
               <img className="git-icon-footer" src={gitIcon} alt="Git Icon" />
               <div className='footer-content'>Github</div>
             </a>
