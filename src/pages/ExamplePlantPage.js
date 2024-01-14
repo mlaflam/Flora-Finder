@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Classification from '../components/Classification';
 import Distributions from '../components/Distributions';
+import Referneces from '../components/Referneces';
 import Conservation from '../components/Conservation';
 import ErrorPage from "./ErrorPage";
 import plantPreview from '../icons/plant-drawing-1.png';
@@ -127,6 +128,7 @@ const ExamplePlantPage = () => {
               <Classification plantData={plantData} id="classification-section" />
               <Distributions plantData={plantData} id="distributions-section" />
               <Conservation plantData={plantData} id="conservation-section" />
+              <Referneces plantData={plantData} id="references-section" />
 
 
             </div>

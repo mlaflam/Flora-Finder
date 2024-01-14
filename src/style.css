@@ -1200,7 +1200,8 @@ p {
 }
 
 .plant-page-header-icon,
-.plant-page-header-icon-1 {
+.plant-page-header-icon-1,
+.plant-page-header-icon-2 {
   height: 40px;
   padding: 10px;
   margin-left: -10px;
@@ -1209,6 +1210,11 @@ p {
 
 .plant-page-header-icon-1 {
   height: 43px;
+}
+
+.plant-page-header-icon-2 {
+  height: 36px;
+  margin-top: 3px;
 }
 
 .plant-info-container {
@@ -1511,4 +1517,22 @@ p {
 
 .bottom-text-hidden {
   display: none;
+}
+
+/*REFERENCES*/
+
+.references-container {
+  max-width: 700px;
+  margin-right: 25px;
+  margin-bottom: 40px;
+}
+
+.references-title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 15px;
 }

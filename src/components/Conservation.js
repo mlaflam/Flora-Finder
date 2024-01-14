@@ -17,7 +17,7 @@ const Conservation = ({ plantData, id }) => {
       'NNR': 'No Status Rank',
     };
 
-    return statusTitles[roundedSRank] || 'Unknown Status';
+    return statusTitles[roundedSRank] || 'No Status Rank';
   };
 
   return (
@@ -40,9 +40,9 @@ const Conservation = ({ plantData, id }) => {
           <ConservationStatusWorld plantData={plantData} rank="G4" title="Apparently Secure" />
           <ConservationStatusWorld plantData={plantData} rank="G5" title="Secure" />
           
-          <div className={`circle ${plantData.plant.gRank !== 'GX' && plantData.plant.gRank !== 'GH' &&
-            plantData.plant.gRank !== 'G1' && plantData.plant.gRank !== 'G2' && plantData.plant.gRank !== 'G3' &&
-            plantData.plant.gRank !== 'G4' && plantData.plant.gRank !== 'G5' ? "visible" : "hidden"}`}>
+          <div className={`circle ${plantData.plant.roundedGRank !== 'GX' && plantData.plant.roundedGRank !== 'GH' &&
+            plantData.plant.roundedGRank !== 'G1' && plantData.plant.roundedGRank !== 'G2' && plantData.plant.roundedGRank !== 'G3' &&
+            plantData.plant.roundedGRank !== 'G4' && plantData.plant.roundedGRank !== 'G5' ? "visible" : "hidden"}`}>
             No Status Rank
           </div>
 
@@ -52,7 +52,7 @@ const Conservation = ({ plantData, id }) => {
 
         
         <div className='conservation-title-2'> United States:
-          <div className='conservation-subtitle'> {plantData.plant.nations[0].roundedNRank}</div></div>
+          <div className='conservation-subtitle'> {getStatusTitle(plantData.plant.nations[0].roundedNRank)} ({plantData.plant.nations[0].roundedNRank})</div></div>
 
         <div className="vl-2">
 
@@ -73,6 +73,8 @@ const Conservation = ({ plantData, id }) => {
           <ConservationStatus plantData={plantData} roundedSRank='SNA' />
         
         </div>
+
+
 
       </div>
 
