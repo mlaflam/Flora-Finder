@@ -4,7 +4,7 @@ import React from 'react';
 const ConservationStatus = ({ plantData, roundedSRank }) => (
   <div className='conservation-subtitle-2'>
     {getStatusTitle(roundedSRank)}:
-    <div className='class-1'>
+    <div className='conservation-subtitle-3'>
       {getSubnationNames(plantData, roundedSRank) || 'N/A'}
     </div>
   </div>

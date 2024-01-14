@@ -1,5 +1,4 @@
 import React from 'react'
-import leafIconThree from '../icons/leaf-icon-3.png';
 import taxonIcon from '../icons/bintree-icon.png';
 
 const Classification = ({ plantData, id }) => {

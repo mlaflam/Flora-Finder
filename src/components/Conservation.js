@@ -33,25 +33,35 @@ const Conservation = ({ plantData, id }) => {
         <div className='conservation-status-container'>
 
           <div className='circles-top'>
-            <ConservationStatusWorld plantData={plantData} rank="GX" title="Presumed Extinct" />
-            <ConservationStatusWorld plantData={plantData} rank="GH" title="Possibly Extinct" />
-            <ConservationStatusWorld plantData={plantData} rank="G1" title="Critically Imperiled" />
-            <ConservationStatusWorld plantData={plantData} rank="G2" title="Imperiled" />
+            <div className='circles-top-top'>
+              <ConservationStatusWorld plantData={plantData} rank="GX" title="Presumed Extinct" />
+              <ConservationStatusWorld plantData={plantData} rank="GH" title="Possibly Extinct" />
+            </div>
+            <div className='circles-top-bottom'>
+              <ConservationStatusWorld plantData={plantData} rank="G1" title="Critically Imperiled" />
+              <ConservationStatusWorld plantData={plantData} rank="G2" title="Imperiled" />
+            </div>
 
           </div>
 
           <div className='circles-bottom'>
-            <ConservationStatusWorld plantData={plantData} rank="G3" title="Vulnerable" />
-            <ConservationStatusWorld plantData={plantData} rank="G4" title="Apparently Secure" />
-            <ConservationStatusWorld plantData={plantData} rank="G5" title="Secure" />
+            <div className='circles-bottom-top'>
+              <ConservationStatusWorld plantData={plantData} rank="G3" title="Vulnerable" />
+              <ConservationStatusWorld plantData={plantData} rank="G4" title="Apparently Secure" />
+            </div>
+            <div className='circles-bottom-bottom'>
+              <ConservationStatusWorld plantData={plantData} rank="G5" title="Secure" />
 
-            <div className='circle-container '>
-              <div className={`circle ${plantData.plant.roundedGRank !== 'GX' && plantData.plant.roundedGRank !== 'GH' &&
-                plantData.plant.roundedGRank !== 'G1' && plantData.plant.roundedGRank !== 'G2' && plantData.plant.roundedGRank !== 'G3' &&
-                plantData.plant.roundedGRank !== 'G4' && plantData.plant.roundedGRank !== 'G5' ? "visible" : "hidden"}`}>
-                No Status Rank
+              <div className='circle-container '>
+                <div className={`circle ${plantData.plant.roundedGRank !== 'GX' && plantData.plant.roundedGRank !== 'GH' &&
+                  plantData.plant.roundedGRank !== 'G1' && plantData.plant.roundedGRank !== 'G2' && plantData.plant.roundedGRank !== 'G3' &&
+                  plantData.plant.roundedGRank !== 'G4' && plantData.plant.roundedGRank !== 'G5' ? "visible" : "hidden"}`}>
+                  No Status Rank
+                </div>
               </div>
             </div>
+            
+           
           </div>
 
         </div>

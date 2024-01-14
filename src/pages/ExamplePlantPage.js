@@ -35,13 +35,14 @@ const ExamplePlantPage = () => {
       });
     }
   };
+  
   useEffect(() => {
     const navbarHeight = document.querySelector('.header').offsetHeight;
     const sidebar = document.querySelector('.sidebar');
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const screenWidth = window.innerWidth;
+      const screenWidth = document.documentElement.clientWidth;
 
       // Check if screen width is greater than 900px
       if (screenWidth > 900) {
@@ -50,6 +51,9 @@ const ExamplePlantPage = () => {
         } else {
           sidebar.style.top = '0';
         }
+      } else {
+        // Set top to '0' only if screen width is less than or equal to 900px
+        sidebar.style.top = '0';
       }
     };
 
