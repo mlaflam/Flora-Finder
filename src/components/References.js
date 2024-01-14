@@ -12,19 +12,19 @@ const Referneces = ({ plantData, id }) => {
   };
 
   return (
-    <div className='sections-container-inner' id={id}>
+    <div className='references-container' id={id}>
       <div className='plant-page-header-container'>
         <img className="plant-page-header-icon-2" src={bookIcon} alt="Book Icon" />
         <div className='plant-page-header'>References</div>
       </div>
 
       <div className='class-container'>
-        <div className='references-container'>
+        <div className='api-references-container'>
           <div className='references-title'>API Reference</div>
           NatureServe. [2024]. NatureServe Network Biodiversity Location Data. NatureServe, Arlington, Virginia. NatureServe. 2024. 
         </div>
 
-        <div className='references-container'>
+        <div className='tax-references-container'>
           <div className='references-title'>Taxonomic Comments</div>
           {plantData.plant.speciesGlobal.taxonomicComments
             ? stripHtmlTags(plantData.plant.speciesGlobal.taxonomicComments)

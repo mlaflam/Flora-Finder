@@ -1234,6 +1234,12 @@ p {
   overflow-y: auto;
 }
 
+@media (max-width: 520px) {
+  .sidebar {
+    /*INFO HERE*/
+  }
+}
+
 .sidebar-title {
   background: rgb(88, 141, 76);
   color: white;
@@ -1329,8 +1335,13 @@ p {
   justify-content: start;
   font-size: 18px;
   font-weight: 500;
-  width: 100%;
   margin-bottom: 10px;
+  width: 82%;
+}
+
+.class-subtitle {
+  display: flex;
+  justify-content: start;
 }
 
 .class-1 {
@@ -1338,6 +1349,7 @@ p {
   font-weight: 400;
   color: black;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .class-k,
@@ -1386,13 +1398,27 @@ p {
 }
 
 .map {
-  height: 500px;
-  width: 700px;
+  display: flex;
+  width: 82%;
+  min-height: 200px;
+  min-width: 400px;
   border: solid;
 }
 
 /*CONSERVATION*/
 
+.conservation-container {
+  /**background: rgb(127, 178, 135); **/
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: 40px;
+  width: 82%;
+
+}
 
 .conservation-title {
   display: flex;
@@ -1446,14 +1472,35 @@ p {
   justify-content: start;
   padding: 10px;
   margin-bottom: 70px;
+  width: 100%;
+}
+
+.circles-top {
+  display: flex;
+}
+
+.circles-bottom {
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .conservation-status-container {
+    display: block;
+  }
+
+  .circles-top {
+    margin-bottom: 60px;
+  }
+
 }
 
 
 .circle-container {
   display: block;
   text-align: center;
-  height: 100px;
+  height: 90px;
 }
+
 
 .circle {
   display: flex;
@@ -1461,27 +1508,26 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 5px;
+  padding: 7px;
   margin: 5px;
   border-radius: 50%;
 }
 
 .visible {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   padding: 7px;
   /*color: white;*/
   background-color: rgb(88, 141, 76);
-  margin-top: -7px;
+  margin-top: -3px;
 }
 
 .hidden {
-
   font-size: 17px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: rgb(222, 239, 218);
   border: solid;
   border-color: rgb(88, 141, 76);
@@ -1489,7 +1535,7 @@ p {
 
 .text-visible {
   /*color: white;*/
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -1522,6 +1568,19 @@ p {
 /*REFERENCES*/
 
 .references-container {
+  /**background: rgb(127, 178, 135); **/
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 60px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: 40px;
+  width: 82%;
+}
+
+.api-references-container,
+.tax-references-container {
   max-width: 700px;
   margin-right: 25px;
   margin-bottom: 40px;

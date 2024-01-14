@@ -16,7 +16,8 @@ const Classification = ({ plantData, id }) => {
           <div className='class-1 '> {plantData.plant.scientificName}</div></div>
 
         <div className='class-scien'>
-          Other Common Names:
+          <div className='class-subtitle'>Other Common Names:</div>
+          
           <div className='class-1 ' >
           {plantData.plant.speciesGlobal.otherCommonNames.length > 0
             ? plantData.plant.speciesGlobal.otherCommonNames.join(', ')

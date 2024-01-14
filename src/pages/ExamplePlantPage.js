@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Classification from '../components/Classification';
 import Distributions from '../components/Distributions';
-import Referneces from '../components/Referneces';
+import Referneces from '../components/References';
 import Conservation from '../components/Conservation';
 import ErrorPage from "./ErrorPage";
 import plantPreview from '../icons/plant-drawing-1.png';
