@@ -7,7 +7,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Classification from '../components/Classification';
 import Distributions from '../components/Distributions';
-import Referneces from '../components/References';
+import References from '../components/References';
 import Conservation from '../components/Conservation';
 import ErrorPage from "./ErrorPage";
 import plantPreview from '../icons/plant-drawing-1.png';
@@ -35,27 +35,33 @@ const ExamplePlantPage = () => {
       });
     }
   };
-
   useEffect(() => {
     const navbarHeight = document.querySelector('.header').offsetHeight;
     const sidebar = document.querySelector('.sidebar');
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+      const screenWidth = window.innerWidth;
 
-      if (scrollPosition >= navbarHeight) {
-        sidebar.style.top = `${navbarHeight + 30}px`;
-      } else {
-        sidebar.style.top = '0';
+      // Check if screen width is greater than 900px
+      if (screenWidth > 900) {
+        if (scrollPosition >= navbarHeight) {
+          sidebar.style.top = `${navbarHeight + 30}px`;
+        } else {
+          sidebar.style.top = '0';
+        }
       }
     };
 
+    // Attach scroll event listener
     window.addEventListener('scroll', handleScroll);
 
+    // Remove event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
 
   if (!plantData) {
@@ -128,7 +134,7 @@ const ExamplePlantPage = () => {
               <Classification plantData={plantData} id="classification-section" />
               <Distributions plantData={plantData} id="distributions-section" />
               <Conservation plantData={plantData} id="conservation-section" />
-              <Referneces plantData={plantData} id="references-section" />
+              <References plantData={plantData} id="references-section" />
 
 
             </div>

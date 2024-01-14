@@ -1234,9 +1234,21 @@ p {
   overflow-y: auto;
 }
 
+@media (max-width: 900px) {
+  .plant-info-container {
+    display: block;
+  }
+
+  .sidebar {
+    margin-left: 100px;
+    position: relative;
+    width: 70%;
+  }
+}
+
 @media (max-width: 520px) {
   .sidebar {
-    /*INFO HERE*/
+    /* Additional styling for smaller screens if needed */
   }
 }
 
