@@ -1353,8 +1353,18 @@ p {
   .sections-container-inner-1,
   .conservation-container,
   .references-container {
-      margin-left: 0px;
+      margin-left: 60px;
     }
+}
+
+@media (max-width: 520px) {
+
+  .sections-container-inner,
+  .sections-container-inner-1,
+  .conservation-container,
+  .references-container {
+    margin-left: 0px;
+  }
 }
 
 
