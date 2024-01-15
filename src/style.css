@@ -10,7 +10,13 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
+
 }
+
+body {
+  background: #fafafa;
+}
+
 
 .block {
   display: block;
@@ -35,7 +41,6 @@ body {
   margin-bottom: 80px;
   width: 65%;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
   margin-left: calc(20% - 45px);
 }
@@ -91,6 +96,7 @@ body {
   transition: box-shadow 0.15s;
 }
 
+
 #search-container:focus-within {
   box-shadow: 0 0 2px rgba(0,0,0,0.75);
 }
@@ -116,8 +122,8 @@ body {
   outline: none;
   border: none;
   background: transparent;
-
 }
+
 
 .search-icon {
   width: 20px;
@@ -177,7 +183,7 @@ p {
 
 .explore-info {
   display: flex;
-  color: #4a4a4a;;
+  color: #4a4a4a;
   
   align-items: start;
   text-align: left;
@@ -236,7 +242,23 @@ p {
 
 .right-section-inner {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   min-width: 110px;
+}
+
+.toggle {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.react-toggle-track-check {
+  padding-top: 10px;
+}
+
+.react-toggle-track-x {
+  padding-top: 10px;
 }
 
 
@@ -246,6 +268,7 @@ p {
   margin-right: 15px;
   border-right: solid;
 }
+
 
 @media (min-width:490px) and (max-width: 520px) {
 
@@ -381,7 +404,7 @@ p {
   flex: 0.9;
   height: 34px;
   font-size: 15px;
-
+  min-width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -507,8 +530,6 @@ p {
   padding: 20px;
 
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
 }
 
 .section-block {

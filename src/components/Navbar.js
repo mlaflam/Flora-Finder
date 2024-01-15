@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useState, useEffect } from "react"
 import '../style.css';
 import leafIconThree from '../icons/leaf-icon-3.png';
 import gitIcon from '../icons/git-icon.png';
 import { Link } from "react-router-dom";
-
+import Toggle from "react-toggle";
+import "react-toggle/style.css" // for ES6 modules
+import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
+
+  const [isDark, setIsDark] = useState(true);
+
+  const systemPrefersDark = useMediaQuery(
+    {
+      query: "(prefers-color-scheme: dark)",
+    },
+    undefined,
+    (isSystemDark) => setIsDark(isSystemDark)
+  );
+
+  useEffect(() => {
+    if (isDark) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [isDark]); 
+
   return (
     <header className="header">
 
@@ -41,11 +62,22 @@ const Navbar = () => {
         </div>
 
         <div className="right-section-inner">
+
           <div className="sign-in-container">
             <div>
               <li className="header-name-left"><Link to='/SignIn' className='LINK' >Sign In</Link></li>
             </div>
           </div>
+
+          <div className="toggle">
+            <Toggle
+              checked={isDark}
+              onChange={({ target }) => setIsDark(target.checked)}
+              icons={{ checked: "🌙", unchecked: "🔆" }}
+              aria-label="Dark mode toggle"
+            />
+          </div>
+          
           <a href="https://github.com/mlaflam/flora-finder-website" target="_blank">
             <img className="git-icon" src={gitIcon} alt="GitHub Icon" />
           </a>
