@@ -20,9 +20,9 @@ const Navbar = () => {
         
 
         <div className="title" >
-          <Link to='/' className='title-link' >FloraFinders</Link>
+          <Link to='/flora-finder/' className='title-link' >FloraFinders</Link>
         </div>
-        <Link to='/' className='LINK' >
+        <Link to='/flora-finder/' className='LINK' >
           <img className="leaf-icon" src={leafIconThree} alt="Leaf Icon" />
         </Link>
 
@@ -36,13 +36,13 @@ const Navbar = () => {
           <div className="header-link">
 
             <div>
-              <li className="header-name-left"><Link to='/Explore' className='LINK' >Explore</Link></li>
+              <li className="header-name-left"><Link to='/flora-finder/Explore' className='LINK' >Explore</Link></li>
             </div>
 
           </div>
           <div className="header-link">
             <div>
-              <li className="header-name-left"><Link to='/About' className='LINK' >About</Link></li>
+              <li className="header-name-left"><Link to='/flora-finder/About' className='LINK' >About</Link></li>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ const Navbar = () => {
 
           <div className="sign-in-container">
             <div>
-              <li className="header-name-left"><Link to='/SignIn' className='LINK' >Sign In</Link></li>
+              <li className="header-name-left"><Link to='/flora-finder/SignIn' className='LINK' >Sign In</Link></li>
             </div>
           </div>
 
