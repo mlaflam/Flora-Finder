@@ -18,6 +18,7 @@ function App() {
       <ScrollToTop /> {/* Include the ScrollToTop component */}
       <Routes>
         <Route index element={<ExplorePage />} />
+        <Route path='/flora-finder-website/' element={<ExplorePage />} />
         <Route path='/Explore' element={<ExplorePage />} />
         <Route path="/PlantPage/:scientificName" element={<ExamplePlantPage />} />
         <Route path='/About' element={<AboutPage />} />
