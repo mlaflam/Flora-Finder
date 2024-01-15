@@ -10,10 +10,10 @@ const ErrorFooter = () => {
       <div className='footer-container'>
         <div className='footer-section'>
           <div className='footer-title'>FloraFinder</div>
-          <div className="footer-content"><Link to='/Explore' className='LINK' >Explore</Link> </div>
+          <div className="footer-content"><Link to='/flora-finder/Explore' className='LINK' >Explore</Link> </div>
 
-          <div className="footer-content"><Link to='/About' className='LINK' >About</Link> </div>
-          <div className="footer-content"><Link to='/SignIn' className='LINK' >Sign In</Link> </div>
+          <div className="footer-content"><Link to='/flora-finder/About' className='LINK' >About</Link> </div>
+          <div className="footer-content"><Link to='/flora-finder/SignIn' className='LINK' >Sign In</Link> </div>
 
         </div>
 
@@ -40,7 +40,7 @@ const ErrorFooter = () => {
 
           </div>
 
-          <div className="footer-content"><Link to='/About#Contact' className='LINK' >Contact Us</Link> </div>
+          <div className="footer-content"><Link to='/flora-finder/About#Contact' className='LINK' >Contact Us</Link> </div>
         </div>
       </div>
     </footer>
