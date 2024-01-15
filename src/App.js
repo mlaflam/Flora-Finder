@@ -20,15 +20,15 @@ function App() {
         <Route index element={<ExplorePage />} />
         <Route path='/flora-finder/' element={<ExplorePage />} />
         <Route path='/flora-finder' element={<ExplorePage />} />
-        <Route path='/Explore' element={<ExplorePage />} />
-        <Route path="/PlantPage/:scientificName" element={<ExamplePlantPage />} />
-        <Route path='/About' element={<AboutPage />} />
+        <Route path='/flora-finder/Explore' element={<ExplorePage />} />
+        <Route path="/flora-finder/PlantPage/:scientificName" element={<ExamplePlantPage />} />
+        <Route path='/flora-finder/About' element={<AboutPage />} />
           
-        <Route name="About" path="/About" handler={<AboutPage />}>
+        <Route name="About" path="/flora-finder/About" handler={<AboutPage />}>
           <Route name="Contact" path="#Contact" handler={<Contact />} />
         </Route>
 
-        <Route path='/SignIn' element={<SignInPage />} />
+        <Route path='/flora-finder/SignIn' element={<SignInPage />} />
         <Route path='*' element={<ErrorPage />} />
 
       </Routes>
