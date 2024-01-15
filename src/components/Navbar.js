@@ -57,6 +57,7 @@ const Navbar = () => {
 
           <div className="toggle">
             <Toggle
+              className="custom-toggle"
               checked={isDark}
               onChange={({ target }) => setIsDark(target.checked)}
               icons={{ checked: "🌙", unchecked: "🔆" }}

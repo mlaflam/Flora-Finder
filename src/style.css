@@ -249,12 +249,27 @@ p {
   margin-top: 5px;
 }
 
-.react-toggle-track-check {
-  padding-top: 10px;
+.custom-toggle .react-toggle-track-check {
+  padding-top: 5px;
+  height: 5px;
+  width: 7px;
 }
 
-.react-toggle-track-x {
-  padding-top: 10px;
+.custom-toggle .react-toggle-track-x {
+  padding-top: 5px;
+  padding-right: 5px;
+  height: 5px;
+  width: 7px;
+}
+
+.custom-toggle .react-toggle-track {
+  background-color: #5b5b5b; 
+}
+
+/* Style for the thumb (handle) */
+.custom-toggle .react-toggle-thumb {
+  border: 2px solid #333;
+  background-color: #fff;
 }
 
 
