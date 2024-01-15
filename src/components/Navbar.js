@@ -4,28 +4,15 @@ import leafIconThree from '../icons/leaf-icon-3.png';
 import gitIcon from '../icons/git-icon.png';
 import { Link } from "react-router-dom";
 import Toggle from "react-toggle";
+import { useColorScheme } from "./useColorScheme";
 import "react-toggle/style.css" // for ES6 modules
 import { useMediaQuery } from "react-responsive";
+import DarkModeToggle from './DarkModeToggle'
 
 const Navbar = () => {
 
-  const [isDark, setIsDark] = useState(true);
+  const { isDark, setIsDark } = useColorScheme();
 
-  const systemPrefersDark = useMediaQuery(
-    {
-      query: "(prefers-color-scheme: dark)",
-    },
-    undefined,
-    (isSystemDark) => setIsDark(isSystemDark)
-  );
-
-  useEffect(() => {
-    if (isDark) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, [isDark]); 
 
   return (
     <header className="header">
