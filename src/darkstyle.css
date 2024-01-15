@@ -1,5 +1,12 @@
 /** LINKS **/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@100;300;400;500;700&display=swap');body.dark {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body.dark {
+  background: #1f2023;
+  color: white;
+}
+
+body.dark #sign-in-container {
   background: #1f2023;
   color: white;
 }
@@ -10,11 +17,10 @@ body.dark #search-container {
   color: white;
 }
 
-body.dark .search::placeholder {
-  color: #b1b1b1;
-}
-
-body.dark .explore-info {
+body.dark .search::placeholder,
+body.dark .explore-info,
+body.dark .section-info,
+body.dark .plant-title-2 {
   color: #b1b1b1;
 }
 
@@ -22,12 +28,46 @@ body.dark .header {
   background-color: rgb(88, 141, 76);
 }
 
-body.dark .leaf-icon {
+body.dark .LINK {
+  text-decoration: none;
   color: black;
 }
 
+
+body.dark .LINK:active {
+  color: rgb(0, 72, 0);
+}
+
+body.dark .LINK:hover {
+  color: green;
+}
+
+body.dark .LINK:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+body.dark .leaf-icon,
 body.dark .header-name-left {
   color: black;
+}
+
+body.dark .header-name-left:hover {
+  color: rgb(222, 239, 218);
+}
+
+body.dark .header-name-left:active {
+  color: rgb(147, 207, 133);
+}
+
+body.dark .header-name-left:hover::after,
+body.dark .sign-in-container:hover::after {
+  border-bottom-color: rgb(222, 239, 218);
+}
+
+body.dark .header-name-left:active::after,
+body.dark .sign-in-container:active::after {
+  border-bottom-color: rgb(147, 207, 133);
 }
 
 body.dark .footer,
@@ -40,10 +80,6 @@ body.dark .line {
   border: 1px solid #b1b1b1;
 }
 
-body.dark .section-info {
-  color: #b1b1b1;
-}
-
 body.dark .about-page-contact-section {
   color: black;
   background-color: rgb(88, 141, 76);
@@ -51,14 +87,15 @@ body.dark .about-page-contact-section {
 
 body.dark .name-info,
 body.dark .email-info,
-body.dark .message-info {
+body.dark .message-info,
+body.dark .username-info {
   background-color: #b1b1b1;
-
 }
 
 body.dark .name-info::placeholder,
 body.dark .email-info::placeholder,
-body.dark .message-info::placeholder {
+body.dark .message-info::placeholder,
+body.dark .username-info::placeholder {
   color: black;
 }
 
@@ -76,4 +113,42 @@ body.dark .plant-scientific-name {
 
 body.dark .plant-common-name {
   color: #b1b1b1;
+}
+
+body.dark .plant-img-block,
+body.dark .plant-block {
+  background-color: rgb(88, 141, 76);
+  border-color: #b1b1b1;
+}
+
+body.dark .sidebar-section:hover {
+  background-color: #37393f;
+}
+
+body.dark .sidebar-section:active {
+  background-color: #23252a;
+}
+
+body.dark .class-1,
+body.dark .class-2,
+body.dark .conservation-subtitle,
+body.dark .conservation-subtitle-3 {
+  color: #b1b1b1;
+}
+
+body.dark .hidden {
+  color: black;
+  background-color: rgb(88, 141, 76);
+}
+
+body.dark .visible {
+  color: black;
+  background-color: rgb(222, 239, 218);
+  border-color: rgb(88, 141, 76);
+  border: solid;
+  border-width: 1px;
+}
+
+body.dark .triangle {
+  border-bottom-color: rgb(88, 141, 76);
 }
