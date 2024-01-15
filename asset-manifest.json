@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/flora-finder-website/static/css/main.9088a684.css",
-    "main.js": "/flora-finder-website/static/js/main.cda37078.js",
+    "main.js": "/flora-finder-website/static/js/main.ed990c6c.js",
     "static/js/787.3b1e1a42.chunk.js": "/flora-finder-website/static/js/787.3b1e1a42.chunk.js",
     "static/media/usa_states_map-scaled.jpeg": "/flora-finder-website/static/media/usa_states_map-scaled.93930f948abfc768954a.jpeg",
     "static/media/mail-icon-1.png": "/flora-finder-website/static/media/mail-icon-1.dd01b7f718a16fbba4ad.png",
@@ -21,11 +21,11 @@
     "static/media/error-icon-1.png": "/flora-finder-website/static/media/error-icon-1.bdc6af911df4b7a45107.png",
     "index.html": "/flora-finder-website/index.html",
     "main.9088a684.css.map": "/flora-finder-website/static/css/main.9088a684.css.map",
-    "main.cda37078.js.map": "/flora-finder-website/static/js/main.cda37078.js.map",
+    "main.ed990c6c.js.map": "/flora-finder-website/static/js/main.ed990c6c.js.map",
     "787.3b1e1a42.chunk.js.map": "/flora-finder-website/static/js/787.3b1e1a42.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9088a684.css",
-    "static/js/main.cda37078.js"
+    "static/js/main.ed990c6c.js"
   ]
 }
