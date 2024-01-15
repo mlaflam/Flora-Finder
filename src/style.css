@@ -336,7 +336,6 @@ p {
   transform: translateX(-50%);
   width: 60%;
   /* Adjust the width to change the length of the border */
-  border-bottom: 1px solid transparent;
   /* Set a transparent border by default */
   transition: width 0.15s, border-bottom-color 0.15s;
   /* Add width and border-bottom-color transitions */
@@ -345,8 +344,6 @@ p {
 .sign-in-container:hover::after {
   width: 50%;
   /* Adjust the width on hover */
-  border-bottom-color: green;
-  /* Change border color on hover */
 }
 
 .sign-in-container:hover {
