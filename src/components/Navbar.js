@@ -7,7 +7,6 @@ import Toggle from "react-toggle";
 import { useColorScheme } from "./useColorScheme";
 import "react-toggle/style.css" // for ES6 modules
 import { useMediaQuery } from "react-responsive";
-import DarkModeToggle from './DarkModeToggle'
 
 const Navbar = () => {
 
