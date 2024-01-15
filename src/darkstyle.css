@@ -69,3 +69,11 @@ body.dark .contact-button {
 body.dark .errors {
   color: rgb(179, 6, 6);
 }
+
+body.dark .plant-scientific-name {
+  color: white;
+}
+
+body.dark .plant-common-name {
+  color: #b1b1b1;
+}
