@@ -1,6 +1,6 @@
 {
-  "homepage": "http://mlaflam.github.io/Flora-Finder",
-  "name": "flora-finder-website",
+  "homepage": "http://mlaflam.github.io/flora-finder",
+  "name": "flora-finder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
