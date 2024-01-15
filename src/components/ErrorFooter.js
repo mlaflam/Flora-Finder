@@ -10,10 +10,10 @@ const ErrorFooter = () => {
       <div className='footer-container'>
         <div className='footer-section'>
           <div className='footer-title'>FloraFinder</div>
-          <div className="footer-content"><Link to='/Explore' className='LINK' >Explore</Link> </div>
+          <div className="footer-content"><Link to='/flora-finder/Explore' className='LINK' >Explore</Link> </div>
 
-          <div className="footer-content"><Link to='/About' className='LINK' >About</Link> </div>
-          <div className="footer-content"><Link to='/SignIn' className='LINK' >Sign In</Link> </div>
+          <div className="footer-content"><Link to='/flora-finder/About' className='LINK' >About</Link> </div>
+          <div className="footer-content"><Link to='/flora-finder/SignIn' className='LINK' >Sign In</Link> </div>
 
         </div>
 
@@ -33,14 +33,14 @@ const ErrorFooter = () => {
           <div className='footer-title'>Learn More</div>
 
           <div >
-            <a id="github-container" href="https://github.com/mlaflam/flora-finder-website" target='_blank'>
+            <a id="github-container" className='LINK' href="https://github.com/mlaflam/flora-finder-website" target='_blank'>
               <img className="git-icon-footer" src={gitIcon} alt="Git Icon" />
               <div className='footer-content'>Github</div>
             </a>
 
           </div>
 
-          <div className="footer-content"><Link to='/About#Contact' className='LINK' >Contact Us</Link> </div>
+          <div className="footer-content"><Link to='/flora-finder/About#Contact' className='LINK' >Contact Us</Link> </div>
         </div>
       </div>
     </footer>

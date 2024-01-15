@@ -11,7 +11,7 @@ function ExamplePlant({ plant}) {
 
 
   return (
-    <Link to={{ pathname: `/PlantPage/${plant.scientificName}` }}
+    <Link to={{ pathname: `/flora-finder/PlantPage/${plant.scientificName}` }}
       state={{ plant }}
       className='link-to-plant'>
       

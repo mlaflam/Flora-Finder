@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 
 import '../style.css';
+import '../darkstyle.css';
 import ExamplePlant from '../components/Example-Plant';
 import Navbar from '../components/Navbar';
 import compassIcon from '../icons/compass-icon-6.png';
@@ -159,7 +160,7 @@ function ExplorePage() {
           }],
           pagingOptions: {
             page: null,
-            recordsPerPage: 4,
+            recordsPerPage: 12,
           },
           recordSubtypeCriteria: [],
           modifiedSince: null,

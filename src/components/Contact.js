@@ -118,7 +118,7 @@ const Contact = () => {
               <div className='button-block'>
 
                 <input className='contact-button'
-                  value="Send" type='submit' placeholder='Send Message' />
+                  value="Send Message" type='submit' placeholder='Send Message' />
 
               </div>
 

@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from "react"
 import '../style.css';
 import leafIconThree from '../icons/leaf-icon-white.png';
 import gitIcon from '../icons/git-icon-white.png';
 import { Link } from "react-router-dom";
-
+import Toggle from "react-toggle";
+import { useColorScheme } from "./useColorScheme";
+import "react-toggle/style.css" // for ES6 modules
+import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
+
+  const { isDark, setIsDark } = useColorScheme();
+
+
   return (
     <header className="header">
 
@@ -13,9 +20,9 @@ const Navbar = () => {
         
 
         <div className="title" >
-          <Link to='/' className='title-link' >FloraFinders</Link>
+          <Link to='/flora-finder/' className='title-link' >FloraFinders</Link>
         </div>
-        <Link to='/' className='LINK' >
+        <Link to='/flora-finder/' className='LINK' >
           <img className="leaf-icon" src={leafIconThree} alt="Leaf Icon" />
         </Link>
 
@@ -29,23 +36,34 @@ const Navbar = () => {
           <div className="header-link">
 
             <div>
-              <li className="header-name-left"><Link to='/Explore' className='LINK' >Explore</Link></li>
+              <li className="header-name-left"><Link to='/flora-finder/Explore' className='LINK' >Explore</Link></li>
             </div>
 
           </div>
           <div className="header-link">
             <div>
-              <li className="header-name-left"><Link to='/About' className='LINK' >About</Link></li>
+              <li className="header-name-left"><Link to='/flora-finder/About' className='LINK' >About</Link></li>
             </div>
           </div>
         </div>
 
         <div className="right-section-inner">
+
           <div className="sign-in-container">
             <div>
-              <li className="header-name-left"><Link to='/SignIn' className='LINK' >Sign In</Link></li>
+              <li className="header-name-left"><Link to='/flora-finder/SignIn' className='LINK' >Sign In</Link></li>
             </div>
           </div>
+
+          <div className="toggle">
+            <Toggle
+              checked={isDark}
+              onChange={({ target }) => setIsDark(target.checked)}
+              icons={{ checked: "🌙", unchecked: "🔆" }}
+              aria-label="Dark mode toggle"
+            />
+          </div>
+          
           <a href="https://github.com/mlaflam/flora-finder-website" target="_blank">
             <img className="git-icon" src={gitIcon} alt="GitHub Icon" />
           </a>
