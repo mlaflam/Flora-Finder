@@ -111,12 +111,15 @@ const ExamplePlantPage = () => {
                 >
                   Classification
                 </div>
-                <div
+                
+                { /* <div
                   className="sidebar-section"
                   onClick={() => scrollToSection('distributions-section')}
                 >
                   Distributions
-                </div>
+                </div> */}
+                
+
                 <div
                   className="sidebar-section"
                   onClick={() => scrollToSection('conservation-section')}
@@ -136,7 +139,7 @@ const ExamplePlantPage = () => {
             <div className='sections-container-outer'>
 
               <Classification plantData={plantData} id="classification-section" />
-              <Distributions plantData={plantData} id="distributions-section" />
+              { /* <Distributions plantData={plantData} id="distributions-section" /> */ }
               <Conservation plantData={plantData} id="conservation-section" />
               <References plantData={plantData} id="references-section" />
 
