@@ -30,6 +30,13 @@ body {
   margin-bottom: 100px;
 }
 
+.block-title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 35px;
+}
+
 #search-box-container, #error-main-container {
   /**background: rgb(127, 178, 135); **/
   padding: 20px;

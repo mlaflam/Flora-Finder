@@ -19,13 +19,35 @@ const customIdError2 = "custom-id-no-2";
 
 function ExplorePage() {
 
-  const [plantData, setPlantData] = useState(null);
-
   const [state, setState] = useState([]);
+  const [phylumStates, setPhylumStates] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
 
+  { /*PHYLUMS*/ }
+  const phylums = ["Anthocerotophyta", "Bryophyta", "Charophyta", "Chlorophyta",
+    "Cycadophyta", "Ginkgophyta", "Glaucophyta", "Gnetophyta", "Lycophyta",
+    "Anthophyta", "Hepatophyta", "Coniferophyta", "Pteridophyta"];
+
+  const phylumTitle = {
+    Anthocerotophyta: 'Hornworts',
+    Bryophyta: 'Mosses',
+    Charophyta: 'Charophytes',
+    Chlorophyta: 'Cycads',
+    Cycadophyta: 'Cycads',
+    Ginkgophyta: 'Ginkgo',
+    Glaucophyta: 'Glaucophytes',
+    Gnetophyta: 'Gnetophytes',
+    Lycophyta: 'Clubmosses and Spikemosses',
+    Anthophyta: 'Flowering plants',
+    Hepatophyta: 'Liverworts',
+    Coniferophyta: 'Conifers',
+    Pteridophyta: 'Ferns, and Horsetails',
+
+  }
+
+
   { /*search here*/}
-  const searchState = async (stateName) => {
+  const searchStateByPhylum = async (stateName, phylum) => {
     // Map state name to abbreviation
     const stateAbbreviations = {
       Alabama: 'AL',
@@ -160,7 +182,7 @@ function ExplorePage() {
           }],
           pagingOptions: {
             page: null,
-            recordsPerPage: 12,
+            recordsPerPage: 4,
           },
           recordSubtypeCriteria: [],
           modifiedSince: null,
@@ -169,8 +191,10 @@ function ExplorePage() {
           },
           classificationOptions: null,
           speciesTaxonomyCriteria: [{
-            "paramType": "informalTaxonomy",
-            "informalTaxonomy": "Plants"
+            "paramType": "scientificTaxonomy",
+            "level": "PHYLUM",
+            "scientificTaxonomy": phylum,
+             "kingdom": "Plantae"
           }],
         }),
       });
@@ -180,32 +204,36 @@ function ExplorePage() {
       }
 
       const data = await response.json();
-      setState(data.results);
-      console.log(data.results)
+      setPhylumStates((prevStates) => ({
+        ...prevStates,
+        [phylum]: data.results,
+      }));
+      console.log(data.results);
     } catch (error) {
       console.error('Error fetching data:', error.message);
-      toast.error("Error fetching data", {
-        toastId: customIdError2
+      toast.error('Error fetching data', {
+        toastId: customIdError2,
       });
     }
   };
 
   useEffect(() => {
-    searchState('');
+    phylums.forEach((phylum) => {
+      searchStateByPhylum('', phylum);
+    });
   }, []);
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
-      searchState(searchTerm);
+      phylums.forEach((phylum) => {
+        searchStateByPhylum(searchTerm, phylum);
+      });
     }
   };
 
   const handleClearSearch = () => {
     setSearchTerm('');
   };
-
-  
-  
 
 
   return (
@@ -250,25 +278,22 @@ function ExplorePage() {
           {/*<MapComponent data={data} width={500} height={300} /> */}
 
           <div className="block-ex">
-
-            {
-              state?.length > 0 ? (
-                <div>
-                  {/*console.log(state)*/}
-                  <div id="example-plants-grid">
-                    {state.map((plant) => (
-                    
-                      <ExamplePlant plant={plant}/>
-                    ))}
+            {/*<API Call for Anthocerotophyta /> */}
+            {phylums.map((phylum) => (
+              <div key={phylum}>
+                {phylumStates[phylum]?.length > 0 && (
+                  <div>
+                    <div className="block-title">{phylumTitle[phylum]}</div>
+                    <div id="example-plants-grid">
+                      {phylumStates[phylum].map((plant) => (
+                        <ExamplePlant key={plant.id} plant={plant} />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ) : (
-                <div className="empty">
-                    {/* <h2>No Plants Found</h2> */}
-                    <h2 className="spacer"></h2>
-                </div>
-              )
-            }
+                )}
+              </div>
+            ))}
+
 
 
           </div>
