@@ -20,7 +20,9 @@ body.dark #search-container {
 body.dark .search::placeholder,
 body.dark .explore-info,
 body.dark .section-info,
-body.dark .plant-title-2 {
+body.dark .plant-title-2,
+body.dark .error-info-first,
+body.dark .error-info-second {
   color: #b1b1b1;
 }
 
@@ -151,4 +153,9 @@ body.dark .visible {
 
 body.dark .triangle {
   border-bottom-color: rgb(88, 141, 76);
+}
+
+
+body.dark .link-back-2 {
+  background: #37393f;
 }

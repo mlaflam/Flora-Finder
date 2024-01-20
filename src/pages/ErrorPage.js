@@ -35,7 +35,7 @@ const ErrorPage = () => {
             <div className='link-container'>
               <Link to='/' className='link-back-1'> Back to main</Link>
 
-              <Link to='/About#Contact' className='link-back-2'>
+              <Link to='/flora-finder/About#Contact' className='link-back-2'>
                 Contact Us
               </Link>
               
