@@ -267,11 +267,19 @@ function ExplorePage() {
                   onKeyDown={handleKeyPress}
                 />
               </div>
-
               {searchTerm && (
                 <img className="x-icon" src={xIcon} alt="X Icon" onClick={handleClearSearch} />
               )}
             </div>
+
+            <div className="advanced-search-container">
+              <div className="advanced-search-title"> Advanced Search </div>
+              <div className="advanced-search-container-inner">
+      
+              </div>
+
+            </div>
+
           </div>
 
 

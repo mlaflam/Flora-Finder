@@ -2,6 +2,7 @@ import React from 'react'
 import '../style.css';
 import Navbar from '../components/Navbar';
 import ErrorFooter from '../components/ErrorFooter';
+import Footer from '../components/Footer';
 
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -15,7 +16,7 @@ const ErrorPage = () => {
         <div className="block-main">
         <Navbar />
 
-        <div className="block">
+        <div className="error-block">
 
           <div id="error-main-container">
             <div className="error-container">
@@ -47,7 +48,7 @@ const ErrorPage = () => {
 
         </div>
 
-        <ErrorFooter />
+        <Footer />
 
         </div>
 
