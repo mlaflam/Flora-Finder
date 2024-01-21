@@ -7,12 +7,10 @@ import ExamplePlant from '../components/Example-Plant';
 import Navbar from '../components/Navbar';
 import compassIcon from '../icons/compass-icon-4.png';
 import searchIcon from '../icons/search-icon-3.png';
-import arrowIconBefore from '../icons/arrow-icon-2.png';
-import arrowIconAfter from '../icons/arrow-icon.png';
 import xIcon from '../icons/x-button-icon.png';
 import Footer from '../components/Footer';
+import AdvancedSearch from "../components/AdvancedSearch.js";
 import MapComponent from "../components/MapComponent.js";
-import AdvancedSearchOption from "../components/AdvancedSearchOption.js";
 
 const plants_api_url = 'https://explorer.natureserve.org/api/data/speciesSearch';
 
@@ -21,11 +19,6 @@ const customIdError = "custom-id-no";
 const customIdError2 = "custom-id-no-2";
 
 function ExplorePage() {
-
-  const [isChecked, setIsChecked] = useState(false);
-  const handleCheckboxClick = () => {
-    setIsChecked(!isChecked);
-  };
 
   const [state, setState] = useState([]);
   const [phylumStates, setPhylumStates] = useState({});
@@ -243,12 +236,6 @@ function ExplorePage() {
     setSearchTerm('');
   };
 
-  const [isArrowAfter, setIsArrowAfter] = useState(false);
-
-  const handleClick = () => {
-    setIsArrowAfter(!isArrowAfter);
-  };
-
 
   return (
 
@@ -285,62 +272,7 @@ function ExplorePage() {
                 <img className="x-icon" src={xIcon} alt="X Icon" onClick={handleClearSearch} />
               )}
             </div>
-
-            <div className="advanced-search-container-1">
-              <div className="advanced-search-container-2">
-                <div className="advanced-search-title-container">
-                  <img
-                    className="arrow-icon"
-                    src={isArrowAfter ? arrowIconAfter : arrowIconBefore}
-                    alt="Compass Icon"
-                    onClick={handleClick}
-                  />
-                  <div className="advanced-search-title">Advanced Search</div>
-                </div>
-                {isArrowAfter && (
-                  <div className="advanced-search-container-inner">
-                    <div className="advanced-search-container-inner-content">
-                      
-
-                      <div className="advanced-container">
-                        <div className="advanced-top">
-                          <AdvancedSearchOption phylum='Hornworts' />
-                          <AdvancedSearchOption phylum='Mosses' />
-                          <AdvancedSearchOption phylum='Charophytes' />
-                          <AdvancedSearchOption phylum='Chlorophytes' />
-                          <AdvancedSearchOption phylum='Cycads' />
-                        </div>
-
-                        <div className="advanced-middle">
-                          <AdvancedSearchOption phylum='Ginkgo' />
-                          <AdvancedSearchOption phylum='Glaucophytes' />
-                          <AdvancedSearchOption phylum='Gnetophytes' />
-                          <AdvancedSearchOption phylum='Chlorophytes' />
-                          <AdvancedSearchOption phylum='Clubmosses and Spikemosses' />
-                        </div>
-
-                        <div className="advanced-bottom">
-                          <AdvancedSearchOption phylum='Flowering plants' />
-                          <AdvancedSearchOption phylum='Liverworts' />
-                          <AdvancedSearchOption phylum='Conifers' />
-                          <AdvancedSearchOption phylum='Ferns and Horsetails' />
-                         
-                        </div>
-
-
-                      </div>
-
-                      <div className="clear-search-container">
-                        <div className="clear-search">Clear Search</div>
-                      </div>
-
-                     
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-
+            <AdvancedSearch/>
           </div>
 
 
