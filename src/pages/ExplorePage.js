@@ -12,6 +12,7 @@ import arrowIconAfter from '../icons/arrow-icon.png';
 import xIcon from '../icons/x-button-icon.png';
 import Footer from '../components/Footer';
 import MapComponent from "../components/MapComponent.js";
+import AdvancedSearchOption from "../components/AdvancedSearchOption.js";
 
 const plants_api_url = 'https://explorer.natureserve.org/api/data/speciesSearch';
 
@@ -20,6 +21,11 @@ const customIdError = "custom-id-no";
 const customIdError2 = "custom-id-no-2";
 
 function ExplorePage() {
+
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheckboxClick = () => {
+    setIsChecked(!isChecked);
+  };
 
   const [state, setState] = useState([]);
   const [phylumStates, setPhylumStates] = useState({});
@@ -34,7 +40,7 @@ function ExplorePage() {
     Anthocerotophyta: 'Hornworts',
     Bryophyta: 'Mosses',
     Charophyta: 'Charophytes',
-    Chlorophyta: 'Cycads',
+    Chlorophyta: 'Chlorophytes',
     Cycadophyta: 'Cycads',
     Ginkgophyta: 'Ginkgo',
     Glaucophyta: 'Glaucophytes',
@@ -43,7 +49,7 @@ function ExplorePage() {
     Anthophyta: 'Flowering plants',
     Hepatophyta: 'Liverworts',
     Coniferophyta: 'Conifers',
-    Pteridophyta: 'Ferns, and Horsetails',
+    Pteridophyta: 'Ferns and Horsetails',
 
   }
 
@@ -294,8 +300,41 @@ function ExplorePage() {
                 {isArrowAfter && (
                   <div className="advanced-search-container-inner">
                     <div className="advanced-search-container-inner-content">
-                      {/* Add your content here */}
-                      hello
+                      
+
+                      <div className="advanced-container">
+                        <div className="advanced-top">
+                          <AdvancedSearchOption phylum='Hornworts' />
+                          <AdvancedSearchOption phylum='Mosses' />
+                          <AdvancedSearchOption phylum='Charophytes' />
+                          <AdvancedSearchOption phylum='Chlorophytes' />
+                          <AdvancedSearchOption phylum='Cycads' />
+                        </div>
+
+                        <div className="advanced-middle">
+                          <AdvancedSearchOption phylum='Ginkgo' />
+                          <AdvancedSearchOption phylum='Glaucophytes' />
+                          <AdvancedSearchOption phylum='Gnetophytes' />
+                          <AdvancedSearchOption phylum='Chlorophytes' />
+                          <AdvancedSearchOption phylum='Clubmosses and Spikemosses' />
+                        </div>
+
+                        <div className="advanced-bottom">
+                          <AdvancedSearchOption phylum='Flowering plants' />
+                          <AdvancedSearchOption phylum='Liverworts' />
+                          <AdvancedSearchOption phylum='Conifers' />
+                          <AdvancedSearchOption phylum='Ferns and Horsetails' />
+                         
+                        </div>
+
+
+                      </div>
+
+                      <div className="clear-search-container">
+                        <div className="clear-search">Clear Search</div>
+                      </div>
+
+                     
                     </div>
                   </div>
                 )}

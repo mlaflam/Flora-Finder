@@ -163,3 +163,7 @@ body.dark .link-back-2 {
 body.dark .advanced-search-container {
   background-color: #37393f;
 }
+
+body.dark .advanced-search-container-inner-content {
+  background-color: #37393f;
+}

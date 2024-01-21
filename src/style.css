@@ -81,13 +81,6 @@ body {
   }
 }
 
-@media (max-width: 900px) {
-
-  #error-main-container {
-    /*width: 75%;*/
-  }
-}
-
 #search-container {
   background:white;
   display: flex;
@@ -246,14 +239,130 @@ p {
 }
 
 .advanced-search-container-inner-content {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(241, 241, 241);
+  text-align: left;
+  background-color: rgba(222, 239, 218, 0.491);
   border-radius: 5px;
-  height: 100px;
-  width: 90%;
+  height: 300px;
+  width: 80%;
+  padding-top: 10px;
 
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.clear-search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.clear-search {
+  text-align: center;
+
+  background: rgb(88, 141, 76);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+
+  font-size: 18px;
+  width: 20%;
+  min-width: 150px;
+  margin-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.clear-search:hover {
+  background-color: rgb(72, 122, 61);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+}
+
+.clear-search:active {
+  background-color: rgb(51, 96, 39);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+}
+
+.advanced-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+
+  .advanced-container {
+      display: block;
+    }
+}
+
+.advanced-bottom {
+  margin-right: 20px;
+}
+
+.phylum-contatiner {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.p-contatiner {
+  display: flex;
+  align-items: center;
+}
+
+.phylum-title {
+  font-size: 18px;
+  width: 150px;
+}
+
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.checkbox-container:hover {
+  background-color: rgba(60, 203, 28, 0.092);
+  cursor: pointer;
+}
+
+.checkbox {
+  height: 12px;
+  width: 12px;
+  border: solid;
+  border-radius: 3px;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
+
+.check-icon {
+  height: 22px;
+  margin-top: -4px;
+  margin-left: -4px;
+}
+
+.checkbox-clicked {
+  height: 14px;
+  width: 14px;
+  border-radius: 3px;
+  border: solid;
+  border-color: green;
+  background-color: green;
 }
 
 
