@@ -54,9 +54,9 @@ body {
 #sign-in-container {
   background-color: rgb(255, 255, 255);
   
-  min-width: 400px;
-  width: 85%;
-  height: 370px;
+  min-width: 250px;
+  width: 30%;
+  height: 100%;
 
   padding: 20px;
   margin-top: 150px;
@@ -65,8 +65,14 @@ body {
   backdrop-filter: blur(10px);
   /** border: 1px solid rgba(255, 255, 255, 0.1); **/
   text-align: center;
+}
 
-  margin-left: calc(10% - 45px);
+.sign-in-block-main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
 }
 
 @media (max-width: 520px) {
@@ -194,6 +200,60 @@ p {
 
   font-size: 20px;
   font-family: "Roboto Mono", monospace;
+}
+
+.arrow-icon {
+  height: 22px;
+  padding: 10px;
+  margin-top: 2px;
+}
+
+.arrow-icon:hover {
+  cursor: pointer;
+}
+
+.advanced-search-container-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.advanced-search-container-2 {
+  display: block;
+  justify-content: center;
+  margin-top: 20px;
+
+  width: 90%;
+
+}
+
+.advanced-search-title-container {
+  display: flex;
+  justify-content: center;
+}
+
+.advanced-search-title {
+  font-size: 22px;
+
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.advanced-search-container-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.advanced-search-container-inner-content {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+  height: 100px;
+  width: 90%;
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 
 

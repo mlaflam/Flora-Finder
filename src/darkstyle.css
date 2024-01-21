@@ -159,3 +159,7 @@ body.dark .triangle {
 body.dark .link-back-2 {
   background: #37393f;
 }
+
+body.dark .advanced-search-container {
+  background-color: #37393f;
+}

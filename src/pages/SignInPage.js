@@ -10,17 +10,12 @@ function SignInPage() {
 
   return (
 
-    <div>
-      <div className="block-main">
+      <div className="sign-in-block-main">
         <Navbar />
 
         <SignInForm />
 
-
-        
-
       </div>
-    </div>
 
   );
 }
