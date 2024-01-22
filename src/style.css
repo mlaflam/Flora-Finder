@@ -201,10 +201,12 @@ p {
   height: 22px;
   padding: 10px;
   margin-top: 2px;
+  border-radius: 30px;
 }
 
 .arrow-icon:hover {
   cursor: pointer;
+  background-color: rgba(60, 203, 28, 0.092);
 }
 
 .advanced-search-container-1 {
