@@ -128,10 +128,40 @@ function ExplorePage() {
     }
   };
 
+  const [phylumCheckedStates, setPhylumCheckedStates] = useState({
+    Hornworts: true,
+    Mosses: true,
+    Charophytes: true,
+    Chlorophytes: true,
+    Cycads: true,
+    Ginkgo: true,
+    Glaucophytes: true,
+    Gnetophytes: true,
+    Lycophyta: true,
+    Anthophyta: true,
+    Liverworts: true,
+    Conifers: true,
+    Pteridophyta: true
+  });
+
   const handleClearSearch = () => {
     setSearchTerm('');
+    setPhylumCheckedStates({
+      Hornworts: true,
+      Mosses: true,
+      Charophytes: true,
+      Chlorophytes: true,
+      Cycads: true,
+      Ginkgo: true,
+      Glaucophytes: true,
+      Gnetophytes: true,
+      Lycophyta: true,
+      Anthophyta: true,
+      Liverworts: true,
+      Conifers: true,
+      Pteridophyta: true,
+    });
   };
-
 
   return (
 
@@ -168,7 +198,9 @@ function ExplorePage() {
                 <img className="x-icon" src={xIcon} alt="X Icon" onClick={handleClearSearch} />
               )}
             </div>
-            <AdvancedSearch/>
+            <AdvancedSearch
+              setPhylumCheckedStates={setPhylumCheckedStates}
+              phylumCheckedStates={phylumCheckedStates}/>
           </div>
 
 

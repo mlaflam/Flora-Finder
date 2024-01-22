@@ -4,22 +4,7 @@ import AdvancedSearchOption from "../components/AdvancedSearchOption.js";
 import arrowIconBefore from '../icons/arrow-icon-2.png';
 import arrowIconAfter from '../icons/arrow-icon.png';
 
-const AdvancedSearch = () => {
-  const [phylumCheckedStates, setPhylumCheckedStates] = useState({
-    Hornworts: false,
-    Mosses: false,
-    Charophytes: false,
-    Chlorophytes: false,
-    Cycads: false,
-    Ginkgo: false,
-    Glaucophytes: false,
-    Gnetophytes: false,
-    Lycophyta: false,
-    Anthophyta: false,
-    Liverworts: false,
-    Conifers: false,
-    Pteridophyta: false
-  });
+const AdvancedSearch = ({ setPhylumCheckedStates, phylumCheckedStates }) => {
 
   const [isArrowAfter, setIsArrowAfter] = useState(false);
 
