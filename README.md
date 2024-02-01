@@ -15,7 +15,6 @@ Here is a working live demo :  https://mlaflam.github.io/flora-finder/
 ## Site
 
 ### Explore Page
-Currently it is working on all NSE (India) Stocks, BSE (India) Stocks Symbol will be added soon.
 
 ![](website_images/explore.png)
 
