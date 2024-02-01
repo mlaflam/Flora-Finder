@@ -2,7 +2,7 @@ import React from 'react'
 import '../style.css';
 
 import gitIcon from '../icons/git-icon.png';
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 
 
@@ -42,10 +42,14 @@ const Footer = () => {
             
           </div>
 
-          <div className="footer-content"><Link to='/flora-finder/About#Contact' className='LINK' >Contact Us</Link> </div>
+          <div className="footer-content">
+            <Link to='/flora-finder/About#Contact' className='LINK' >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
-      
+
     </footer>
     
   )
