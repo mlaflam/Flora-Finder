@@ -32,12 +32,15 @@ body {
 }
 
 .block-title {
-  text-decoration-line: underline;
+  text-decoration: underline;
+  /**color: rgb(40, 111, 24); **/
+  /**color: rgb(67, 127, 53); **/
+  
   text-decoration-thickness: 1px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 500;
   margin-bottom: 15px;
-  margin-top: 35px;
+  margin-top: 55px;
 }
 
 #search-box-container {
@@ -249,6 +252,7 @@ p {
   border-radius: 5px;
   min-height: 300px;
   width: 85%;
+  max-width: 750px;
   padding-top: 10px;
 
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
@@ -690,9 +694,27 @@ p {
   }
 }
 
-@media (min-width:1400px) {
+@media (min-width:1400px) and (max-width: 1799px) {
   #example-plants-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:1800px) and (max-width: 2099px) {
+  #example-plants-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:2100px) and (max-width: 2599px) {
+  #example-plants-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:2600px) {
+  #example-plants-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 

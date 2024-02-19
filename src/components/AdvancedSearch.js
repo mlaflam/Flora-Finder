@@ -4,7 +4,9 @@ import AdvancedSearchOption from "../components/AdvancedSearchOption.js";
 import arrowIconBefore from '../icons/arrow-icon-2.png';
 import arrowIconAfter from '../icons/arrow-icon.png';
 
-const AdvancedSearch = ({ setPhylumCheckedStates, phylumCheckedStates }) => {
+const AdvancedSearch = (
+  { setPhylumCheckedStates, phylumCheckedStates, setSelectedPhylums, fetchPlantsByPhylums,
+    searchStateByPhylum, searchTerm }) => {
 
   const [isArrowAfter, setIsArrowAfter] = useState(false);
 
@@ -13,24 +15,36 @@ const AdvancedSearch = ({ setPhylumCheckedStates, phylumCheckedStates }) => {
   };
 
   const [isChecked, setIsChecked] = useState(false);
+
   const handleCheckboxClick = (phylum) => {
     setPhylumCheckedStates((prevStates) => ({
       ...prevStates,
       [phylum]: !prevStates[phylum],
     }));
+
+    setSelectedPhylums((prevPhylums) =>
+      prevPhylums.includes(phylum)
+        ? prevPhylums.filter((item) => item !== phylum)
+        : [...prevPhylums, phylum]
+    );
+
+    // Trigger a new search for the modified selectedPhylums
+    searchStateByPhylum(searchTerm, phylum);
   };
 
   const handleClearClick = () => {
-    //setSearchTerm('');
     setPhylumCheckedStates((prevStates) => {
-      // Reset all phylum checkboxes to false
       const updatedStates = {};
       Object.keys(prevStates).forEach((phylum) => {
-        updatedStates[phylum] = false;
+        updatedStates[phylum] = false; // Reset all phylum checkboxes to false
       });
       return updatedStates;
     });
+
+    //setSelectedPhylums([]);
+    fetchPlantsByPhylums(); // Trigger a search with cleared phylums
   };
+  
 
 
   return (
