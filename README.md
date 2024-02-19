@@ -15,7 +15,6 @@ Here is a working live demo :  https://mlaflam.github.io/flora-finder/
 ## Site
 
 ### Explore Page
-
 ![](website_images/explore.png)
 
 ### Example Search

@@ -21,7 +21,6 @@ const customIdError2 = "custom-id-no-2";
 
 function ExplorePage() {
 
-  const [state, setState] = useState([]);
   const [phylumStates, setPhylumStates] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -79,7 +78,7 @@ function ExplorePage() {
           }],
           pagingOptions: {
             page: null,
-            recordsPerPage: 4,
+            recordsPerPage: 8,
           },
           recordSubtypeCriteria: [],
           modifiedSince: null,
@@ -114,11 +113,17 @@ function ExplorePage() {
     }
   };
 
-  useEffect(() => {
-    phylums.forEach((phylum) => {
+  const [selectedPhylums, setSelectedPhylums] = useState(phylums);
+
+  const fetchPlantsByPhylums = async () => {
+    selectedPhylums.forEach((phylum) => {
       searchStateByPhylum('', phylum);
     });
-  }, []);
+  };
+
+  useEffect(() => {
+    fetchPlantsByPhylums();
+  }, [selectedPhylums]);
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
@@ -200,7 +205,13 @@ function ExplorePage() {
             </div>
             <AdvancedSearch
               setPhylumCheckedStates={setPhylumCheckedStates}
-              phylumCheckedStates={phylumCheckedStates}/>
+              phylumCheckedStates={phylumCheckedStates}
+              selectedPhylums={selectedPhylums}
+              setSelectedPhylums={setSelectedPhylums}
+              fetchPlantsByPhylums={fetchPlantsByPhylums}
+              searchStateByPhylum={searchStateByPhylum}
+              searchTerm={searchTerm}
+            />
           </div>
 
 
@@ -208,11 +219,11 @@ function ExplorePage() {
 
           <div className="block-ex">
             {/*<API Call for Anthocerotophyta /> */}
-            {phylums.map((phylum) => (
+            {selectedPhylums.map((phylum) => (
               <div key={phylum}>
                 {phylumStates[phylum]?.length > 0 && (
                   <div>
-                    <div className="block-title">{phylumTitle[phylum]}</div>
+                    <div className="block-title">{phylumTitle[phylum] + ':'}</div>
                     <div id="example-plants-grid">
                       {phylumStates[phylum].map((plant) => (
                         <ExamplePlant key={plant.id} plant={plant} />
