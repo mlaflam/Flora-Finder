@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/flora-finder/static/css/main.9088a684.css",
-    "main.js": "/flora-finder/static/js/main.5a59a470.js",
+    "main.css": "/flora-finder/static/css/main.8d3839cc.css",
+    "main.js": "/flora-finder/static/js/main.91d65d4d.js",
     "static/js/787.867be100.chunk.js": "/flora-finder/static/js/787.867be100.chunk.js",
+    "static/media/check-icon.png": "/flora-finder/static/media/check-icon.dee8ea55db132f0e7522.png",
     "static/media/usa_states_map-scaled.jpeg": "/flora-finder/static/media/usa_states_map-scaled.93930f948abfc768954a.jpeg",
     "static/media/mail-icon-1.png": "/flora-finder/static/media/mail-icon-1.dd01b7f718a16fbba4ad.png",
     "static/media/git-icon.png": "/flora-finder/static/media/git-icon.7376954f77a1567ae838.png",
@@ -19,13 +20,15 @@
     "static/media/sign-in-icon-3.png": "/flora-finder/static/media/sign-in-icon-3.f3642e24959aab0d4db5.png",
     "static/media/book-icon.png": "/flora-finder/static/media/book-icon.92cb9d4a31da668f4299.png",
     "static/media/error-icon-1.png": "/flora-finder/static/media/error-icon-1.bdc6af911df4b7a45107.png",
+    "static/media/arrow-icon-2.png": "/flora-finder/static/media/arrow-icon-2.e833e19632099ba19222.png",
+    "static/media/arrow-icon.png": "/flora-finder/static/media/arrow-icon.df3d2e0178ae490855ec.png",
     "index.html": "/flora-finder/index.html",
-    "main.9088a684.css.map": "/flora-finder/static/css/main.9088a684.css.map",
-    "main.5a59a470.js.map": "/flora-finder/static/js/main.5a59a470.js.map",
+    "main.8d3839cc.css.map": "/flora-finder/static/css/main.8d3839cc.css.map",
+    "main.91d65d4d.js.map": "/flora-finder/static/js/main.91d65d4d.js.map",
     "787.867be100.chunk.js.map": "/flora-finder/static/js/787.867be100.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9088a684.css",
-    "static/js/main.5a59a470.js"
+    "static/css/main.8d3839cc.css",
+    "static/js/main.91d65d4d.js"
   ]
 }
